@@ -1,0 +1,414 @@
+.namenav {
+  color: red;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#particlesjs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: transparent;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutmetext {
+  font-family: 'Roboto', sans-serif;
+}
+
+ body {
+    background-color: #f5f5f5;
+    color: rgb(63, 59, 59);
+  }
+
+.linkedin i {
+  color: #0077B5;
+}
+
+.github i {
+  color: #000000;
+}
+
+.whatsapp i {
+  color: #25D366;
+}
+
+.playstation i {
+  color: #003791;
+}
+
+.discord i {
+  color: #7289DA;
+}
+
+a i:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+footer .socialmedia {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+footer .socialmedia p {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+footer .socialmedia a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+footer .email, footer .phone {
+  display: flex;
+  align-items: center;
+  color: rgb(24, 20, 20);
+}
+
+footer .email i, footer .phone i {
+  margin-right: 10px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .socialmedia p {
+  color: red;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .email a {
+  color: red;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .phone a {
+  color: red;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .copyright p {
+  margin-top: auto;
+  font-size: 14px;
+  color: #100e0e;
+  margin: 0;
+}
+
+footer .copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+.imageleft {
+  max-width: 250px;
+  height: auto;
+}
+
+.imageright {
+  max-width: 10x;
+  height: auto;
+}
+
+.downloadbutton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.downloadbutton:hover {
+  background-color: #45a049;
+}
+
+section {
+  padding: 60px 20px;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+#projects {
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#projects .projectgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project {
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project .githublink {
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.project .githublink:hover {
+  color: #e31e1e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 50px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#skills {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+.skillscontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.skill {
+  width: 60px;
+  height: 60px;
+  transition: box-shadow 0.3s ease;
+}
+
+.skill p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.skill img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skill:hover img {
+  transform: rotate(15deg);
+}
+
+.downloadbutton {
+  font-family: 'Sour Gummy', sans-serif;
+  background-color: #FF0000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.downloadbutton:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+#projects {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #262525;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+#projects p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.projectgallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.project {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.projectinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 200px;
+  text-align: center;
+}
+
+.projectinfo h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.projectinfo p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.githublink {
+  padding: 0.5rem 1rem;
+  background-color: #e8e1e1;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+.githublink:hover {
+  background-color: #555;
+}
+
+.skillsnav {
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+.projectsnav {
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+.contactnav {
+  font-family: 'Sour Gummy', sans-serif;
+}
