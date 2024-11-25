@@ -1,2 +1,2 @@
 # darryldejong.github.io
-My portfolio site where I display my web development projects, skills, and accomplishments.
+This is my portfolio site, where I introduce myself and what I do, built with HTML, CSS, and JavaScript.
