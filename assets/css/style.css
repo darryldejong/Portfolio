@@ -1,13 +1,14 @@
 .namenav {
   color: red;
   font-family: 'Sour Gummy', sans-serif;
-  font-size: 18px;
+  font-size: 36px;
   font-weight: bold;
 }
 
 nav {
   background-color: transparent;
   overflow: hidden;
+  font-size: 24px;
 }
 
 nav ul {
@@ -59,7 +60,8 @@ header, main, footer {
 }
 
 .aboutmetext {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 18px;
 }
 
  body {
@@ -181,8 +183,8 @@ footer .copyright {
 }
 
 .imageright {
-  max-width: 10x;
   height: auto;
+  transform: scale(0.8); /* 60% van de originele grootte */
 }
 
 .downloadbutton {
