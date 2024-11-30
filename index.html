@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darryl's Portfolio</title>
+  <title>Darryl de Jong | Portfolio</title>
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -17,19 +17,25 @@
     <ul>
       <li><a href="#aboutme" class="namenav">Darryl de Jong</a></li>
       <li><a href="#skills" class="skillsnav">Skills</a></li>
+      <li><a href="#certifications" class="certificatenav">Certifications</a></li>
       <li><a href="#projects" class="projectsnav">Projects</a></li>
       <li><a href="#contact" class="contactnav">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- About me Section -->
+  <!-- about -->
   <section id="aboutme" class="aboutme">
     <div class="imageleft">
       <img src="assets/img/Wrf.gif" alt="wrf">
     </div>
     <div class="aboutmetext">
       <h2>About me</h2>
-      <p>I am Darryl, a 23-year-old student currently studying an IT course, where I am learning skills like web development, programming, working with virtual machines, and coding in general.</p>
+      <div class="text-container">
+        <p>
+          I am Darryl, a 23-year-old student currently studying an IT course, where I am learning skills like web development, programming, working with virtual machines, and coding in general.
+        </p>
+      </div>      
+      </p>
         <button class="downloadbutton" onclick="window.open('assets/docs/Resume.pdf', '_blank')">Open Resume</button>
     </div>
     <div class="imageright">
@@ -37,7 +43,7 @@
     </div>
   </section>
 
-  <!-- Skills section -->
+  <!-- skills -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="skillscontainer">
@@ -80,12 +86,42 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- certifications -->
+  <section id="certifications">
+    <div>
+      <h2>Certifications</h2>
+      <p>Here are a few certificates I have obtained.</p>
+    </div>
+    <div class="certificationscontainer">
+      <div class="certificationsection">
+        <button id="leftarrow" aria-label="back">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="certificationcontent">
+          <i class="fab fa-hackerrank fa-3x" id="hackerrankicon"></i>
+          <p id="hackerranktext"></p>
+        </div>
+        <button id="rightarrow" aria-label="next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="certificationsection">
+        <div class="certificationcontent">
+          <i class="fas fa-network-wired fa-3x" id="ciscoicon"></i>
+          <p>Cisco Linux Essentials</p>
+          <p>jul. 2023</p>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- projects -->
 <section id="projects">
   <h2>Most recent work</h2>
   <div class="projectgallery">
     <div class="project">
-      <img src="assets/img/Project1.png" alt="Screenshot Project 1">
+      <img src="assets/img/Project1.png" alt="project1">
       <div class="projectinfo">
         <h3>PackCardOpener</h3>
         <p>A fan-made pokemon simulator game that lets you open virtual Pokémon packs.</p>
@@ -93,7 +129,7 @@
       </div>
     </div>
     <div class="project">
-      <img src="assets/img/Project2.png" alt="Screenshot Project 2">
+      <img src="assets/img/Project2.png" alt="project2">
       <div class="projectinfo">
         <h3>Typi</h3>
         <p>Typi is an automated typing application built using Python's tkinter library</p>
@@ -101,7 +137,7 @@
       </div>
     </div>
     <div class="project">
-      <img src="assets/img/Project3.png" alt="Screenshot of Project 3">
+      <img src="assets/img/Project3.png" alt="project3">
       <div class="projectinfo">
         <h3>WinFileManager</h3>
         <p>Terminal-based script to automatically organize files into the correct folders.</p>
@@ -111,9 +147,8 @@
   </div>
 </section>
 
-<!-- Footer -->
+<!-- footer -->
 <footer id="contact">
-  <!-- Left section -->
   <div class="socialmedia">
     <p>Find me on social media:</p>
     <a href="https://www.linkedin.com/in/darryldejong/" class="linkedin" target="_blank">
@@ -132,13 +167,10 @@
       <i class="fab fa-discord fa-2x"></i>
     </a>
   </div>
-
-  <!-- Right section -->
   <div class="email">
     <i class="fas fa-envelope fa-2x"></i>
     <a href="mailto:darryldjong@gmail.com">darryldjong@gmail.com</a>
   </div>
-
   <div class="copyright">
     <p>&copy; 2024 Darryl de Jong. All rights reserved.</p>
   </div>
