@@ -111,3 +111,35 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hackerrankCerts = [
+    { text: "Hackerrank Python (Basic)", color: "green" },
+    { text: "Hackerrank SQL (Basic)", color: "red" },
+    { text: "Hackerrank CSS (Basic)", color: "blue" }
+  ];
+
+  let currentIndex = 0;
+
+  const hackerrankIcon = document.getElementById("hackerrankicon");
+  const hackerrankText = document.getElementById("hackerranktext");
+  const leftArrow = document.getElementById("leftarrow");
+  const rightArrow = document.getElementById("rightarrow");
+
+  function updateCertificate(index) {
+    hackerrankIcon.style.color = hackerrankCerts[index].color;
+    hackerrankText.textContent = hackerrankCerts[index].text;
+  }
+
+  leftArrow.addEventListener("click", function() {
+    currentIndex = (currentIndex - 1 + hackerrankCerts.length) % hackerrankCerts.length;
+    updateCertificate(currentIndex);
+  });
+
+  rightArrow.addEventListener("click", function() {
+    currentIndex = (currentIndex + 1) % hackerrankCerts.length;
+    updateCertificate(currentIndex);
+  });
+
+  updateCertificate(currentIndex);
+});
