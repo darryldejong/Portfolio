@@ -184,7 +184,7 @@ footer .copyright {
 
 .imageright {
   height: auto;
-  transform: scale(0.8); /* 60% van de originele grootte */
+  transform: scale(0.8);
 }
 
 .downloadbutton {
@@ -266,6 +266,7 @@ html {
   text-align: center;
   padding: 50px;
   font-family: 'Sour Gummy', sans-serif;
+  font-size: 1.5em;
 }
 
 .skillscontainer {
@@ -325,8 +326,7 @@ html {
 }
 
 #projects h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
   color: #262525;
   font-family: 'Sour Gummy', sans-serif;
 }
@@ -413,4 +413,89 @@ html {
 
 .contactnav {
   font-family: 'Sour Gummy', sans-serif;
+}
+
+#certifications {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+#certifications h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#certifications p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.certificationscontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.certificationsection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.certificationcontent {
+  text-align: center;
+}
+
+.certificationcontent i {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.certificationcontent p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .certificationscontainer {
+    flex-direction: column;
+  }
+
+  .certificationsection {
+    flex-direction: column;
+  }
+}
+
+.certificationcontent i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificationcontent i:hover {
+  transform: translateY(-10px);
+}
+
+.certificatenav {
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+#ciscoicon {
+  color: rgb(52, 122, 212);
 }
