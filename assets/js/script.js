@@ -44,72 +44,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // particles
-  particlesJS("particlesjs", {
-    "particles": {
-      "number": {
-        "value": 60,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
+    particlesJS("particlesabout", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ff0c00" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 100, color: "#ff0c00", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: "none" },
       },
-      "color": {
-        "value": "#ff0000"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false
-      },
-      "size": {
-        "value": 3,
-        "random": true
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ff0000",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 3,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "bubble" },
+          onclick: { enable: false, mode: "repulse" },
+          resize: false,
         },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      }
-    },
-    "retina_detect": true
-  });
-
+      },
+      retina_detect: true,
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -142,4 +96,69 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   updateCertificate(currentIndex);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  particlesJS("particlesskills", {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 800 } },
+      color: { value: "#29cc29" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 150, color: "#29cc29", opacity: 0.4, width: 1 },
+      move: { enable: true, speed: 2, direction: "none" },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "repulse" },
+        onclick: { enable: false, mode: "push" },
+        resize: false,
+      },
+    },
+    retina_detect: true,
+  });
+
+  particlesJS("particlescertifications", {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 800 } },
+      color: { value: "#0000ff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 100, color: "#0000ff", opacity: 0.4, width: 1 },
+      move: { enable: true, speed: 2, direction: "none" },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "bubble" },
+        onclick: { enable: false, mode: "repulse" },
+        resize: false,
+      },
+    },
+    retina_detect: true,
+  });
+
+    particlesJS("particlesfooter", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#fc83e5" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 100, color: "#fc83e5", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: "none" },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "bubble" },
+          onclick: { enable: false, mode: "repulse" },
+          resize: false,
+        },
+      },
+      retina_detect: true,
+    });
 });
