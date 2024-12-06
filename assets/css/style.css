@@ -400,7 +400,7 @@ html {
 }
 
 .githublink:hover {
-  background-color: #555;
+  background-color: #e8e1e1;
 }
 
 .skillsnav {
@@ -474,16 +474,6 @@ button:hover {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-  .certificationscontainer {
-    flex-direction: column;
-  }
-
-  .certificationsection {
-    flex-direction: column;
-  }
-}
-
 .certificationcontent i {
   transition: transform 0.3s ease-in-out;
 }
@@ -514,4 +504,156 @@ button:hover {
 
 section {
   position: relative;
+}
+
+/* Tablet en Ipads */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  .aboutme {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageleft, .imageright {
+    max-width: 200px;
+    transform: scale(0.7);
+  }
+
+  .skillscontainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .certificationscontainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+
+  #projects .projectgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    height: 350px;
+  }
+}
+
+/* Telefoons*/
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .namenav {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  nav li {
+    float: none;
+    margin: 10px 0;
+  }
+
+  .aboutme {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageleft, .imageright {
+    max-width: 150px;
+    transform: scale(0.6);
+  }
+
+  .aboutmetext {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .skillscontainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .skill {
+    width: 50px;
+    height: 50px;
+  }
+
+  #projects .projectgallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .certificationscontainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .socialmedia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .socialmedia a {
+    margin: 10px 0;
+  }
+
+  footer .copyright {
+    position: static;
+    transform: none;
+    margin-top: 15px;
+  }
+
+  section {
+    padding: 30px 10px;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  #certifications h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Telefoon klein*/
+@media screen and (max-width: 375px) {
+  .namenav {
+    font-size: 20px;
+  }
+
+  .skillscontainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutmetext {
+    font-size: 14px;
+  }
+
+  #projects h2, #certifications h2 {
+    font-size: 1.5rem;
+  }
 }
