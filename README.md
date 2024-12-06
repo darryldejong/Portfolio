@@ -2,6 +2,7 @@
 ### This is a simple website I created using HTML, CSS, and JavaScript to show my skills, projects, and contact info. You can learn more about what I do and check out some of the work I've done as an IT student.
 
 ### Visit my website here: [darryldejong.github.io](https://darryldejong.github.io/)
+The website has a responsive design and works well on both desktop and mobile devices.
 
 #### For the website, I used:
 - FontAwesome and Devicons for the icons
