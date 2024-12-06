@@ -517,9 +517,14 @@ section {
     text-align: center;
   }
 
-  .imageleft, .imageright {
+  .imageleft {
     max-width: 200px;
-    transform: scale(0.7);
+    transform: scale(0.8);
+  }
+
+  .imageright {
+    max-width: 150px;
+    transform: scale(0.6);
   }
 
   .skillscontainer {
@@ -571,7 +576,12 @@ section {
     text-align: center;
   }
 
-  .imageleft, .imageright {
+  .imageright {
+    max-width: 150px;
+    transform: scale(0.4);
+  }
+
+  .imageleft {
     max-width: 150px;
     transform: scale(0.6);
   }
@@ -656,4 +666,14 @@ section {
   #projects h2, #certifications h2 {
     font-size: 1.5rem;
   }
+
+  .imageleft {
+    max-width: 150px;
+    transform: scale(0.6);
+  }
+
+  .imageright {
+  max-width: 150px;
+  transform: scale(0.4);
+}
 }
