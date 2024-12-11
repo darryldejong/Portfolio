@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const certificationLinks = {
-    "Hackerrank Python (Basic)": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
-    "Hackerrank SQL (Basic)": "https://www.hackerrank.com/certificates/iframe/c8442b83ff34",
-    "Hackerrank CSS (Basic)": "https://www.hackerrank.com/certificates/iframe/6b1a21deff5c"
+    "Hackerrank Python (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
+    "Hackerrank SQL (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/c8442b83ff34",
+    "Hackerrank CSS (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/6b1a21deff5c"
   };
 
   const hackerrankCerts = [
