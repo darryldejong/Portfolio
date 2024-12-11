@@ -90,7 +90,6 @@ header, main, footer {
 }
 
 a i:hover {
-  filter: brightness(1.2);
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
@@ -155,6 +154,11 @@ footer .email a {
   font-weight: bold;
 }
 
+footer .email i:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
 footer .phone a {
   color: red;
   font-family: 'Sour Gummy', sans-serif;
@@ -164,7 +168,7 @@ footer .phone a {
 
 footer .copyright p {
   margin-top: auto;
-  font-size: 14px;
+  font-size: 18px;
   color: #100e0e;
   margin: 0;
 }
@@ -505,6 +509,7 @@ button:hover {
 section {
   position: relative;
 }
+
 
 /* Tablet en Ipads */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
