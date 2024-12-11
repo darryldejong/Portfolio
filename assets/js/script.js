@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const socialMediaText = document.querySelector('footer .socialmedia p');
-
   if (socialMediaText) {
     socialMediaText.addEventListener('mouseover', function() {
       socialMediaText.style.textDecoration = 'underline';
@@ -44,14 +43,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-    particlesJS("particlesabout", {
+  const particlesConfigurations = [
+    { id: "particlesabout", color: "#ff0c00" },
+    { id: "particlesskills", color: "#29cc29" },
+    { id: "particlescertifications", color: "#0000ff" },
+    { id: "particlesfooter", color: "#fc83e5" }
+  ];
+
+  particlesConfigurations.forEach(config => {
+    particlesJS(config.id, {
       particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#ff0c00" },
+        color: { value: config.color },
         shape: { type: "circle" },
         opacity: { value: 0.5 },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 100, color: "#ff0c00", opacity: 0.4, width: 1 },
+        line_linked: { enable: true, distance: 100, color: config.color, opacity: 0.4, width: 1 },
         move: { enable: true, speed: 2, direction: "none" },
       },
       interactivity: {
@@ -64,13 +71,18 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       retina_detect: true,
     });
-});
+  });
 
-document.addEventListener('DOMContentLoaded', function() {
+  const certificationLinks = {
+    "Hackerrank Python (Basic)": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
+    "Hackerrank SQL (Basic)": "https://www.hackerrank.com/certificates/iframe/c8442b83ff34",
+    "Hackerrank CSS (Basic)": "https://www.hackerrank.com/certificates/iframe/6b1a21deff5c"
+  };
+
   const hackerrankCerts = [
-    { text: "Hackerrank Python (Basic)", color: "green" },
-    { text: "Hackerrank SQL (Basic)", color: "red" },
-    { text: "Hackerrank CSS (Basic)", color: "blue" }
+    { text: "Hackerrank Python (Basic) - okt. 2024", color: "green" },
+    { text: "Hackerrank SQL (Basic) - okt. 2024", color: "red" },
+    { text: "Hackerrank CSS (Basic) - okt. 2024", color: "blue" }
   ];
 
   let currentIndex = 0;
@@ -81,8 +93,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const rightArrow = document.getElementById("rightarrow");
 
   function updateCertificate(index) {
-    hackerrankIcon.style.color = hackerrankCerts[index].color;
-    hackerrankText.textContent = hackerrankCerts[index].text;
+    const currentCert = hackerrankCerts[index];
+    hackerrankIcon.style.color = currentCert.color;
+    
+    const certLink = document.createElement('a');
+    certLink.href = certificationLinks[currentCert.text];
+    certLink.textContent = currentCert.text;
+    certLink.target = "_blank";
+    certLink.style.color = 'inherit';
+    certLink.style.textDecoration = 'none';
+    certLink.style.cursor = 'pointer';
+
+    certLink.addEventListener('mouseover', function() {
+      this.style.color = 'blue';
+      this.style.textDecoration = 'underline';
+    });
+    
+    certLink.addEventListener('mouseout', function() {
+      this.style.color = 'inherit';
+      this.style.textDecoration = 'none';
+    });
+
+    hackerrankText.innerHTML = '';
+    hackerrankText.appendChild(certLink);
   }
 
   leftArrow.addEventListener("click", function() {
@@ -96,69 +129,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   updateCertificate(currentIndex);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  particlesJS("particlesskills", {
-    particles: {
-      number: { value: 60, density: { enable: true, value_area: 800 } },
-      color: { value: "#29cc29" },
-      shape: { type: "circle" },
-      opacity: { value: 0.5 },
-      size: { value: 3, random: true },
-      line_linked: { enable: true, distance: 150, color: "#29cc29", opacity: 0.4, width: 1 },
-      move: { enable: true, speed: 2, direction: "none" },
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: false, mode: "repulse" },
-        onclick: { enable: false, mode: "push" },
-        resize: false,
-      },
-    },
-    retina_detect: true,
+  const ciscoIcon = document.getElementById("ciscoicon");
+  const ciscoCertText = ciscoIcon.nextElementSibling;
+
+  const ciscoLink = document.createElement('a');
+  ciscoLink.href = "https://www.netacad.com/courses/linux-essentials?courseLang=en-US";
+  ciscoLink.textContent = ciscoCertText.textContent;
+  ciscoLink.target = "_blank";
+  ciscoLink.style.color = 'inherit';
+  ciscoLink.style.textDecoration = 'none';
+  ciscoLink.style.cursor = 'pointer';
+
+  ciscoLink.addEventListener('mouseover', function() {
+    this.style.color = 'blue';
+    this.style.textDecoration = 'underline';
+  });
+  
+  ciscoLink.addEventListener('mouseout', function() {
+    this.style.color = 'inherit';
+    this.style.textDecoration = 'none';
   });
 
-  particlesJS("particlescertifications", {
-    particles: {
-      number: { value: 60, density: { enable: true, value_area: 800 } },
-      color: { value: "#0000ff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.5 },
-      size: { value: 3, random: true },
-      line_linked: { enable: true, distance: 100, color: "#0000ff", opacity: 0.4, width: 1 },
-      move: { enable: true, speed: 2, direction: "none" },
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: false, mode: "bubble" },
-        onclick: { enable: false, mode: "repulse" },
-        resize: false,
-      },
-    },
-    retina_detect: true,
-  });
-
-    particlesJS("particlesfooter", {
-      particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#fc83e5" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 100, color: "#fc83e5", opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 2, direction: "none" },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: false, mode: "bubble" },
-          onclick: { enable: false, mode: "repulse" },
-          resize: false,
-        },
-      },
-      retina_detect: true,
-    });
+  ciscoCertText.innerHTML = '';
+  ciscoCertText.appendChild(ciscoLink);
 });
