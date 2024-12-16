@@ -1,7 +1,7 @@
 .namenav {
-  color: red;
+  color: #235bae;
   font-family: 'Sour Gummy', sans-serif;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
 }
 
@@ -141,14 +141,14 @@ footer a:hover {
 }
 
 footer .socialmedia p {
-  color: red;
+  color: #235bae;
   font-family: 'Sour Gummy', sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
 
 footer .email a {
-  color: red;
+  color: #235bae;
   font-family: 'Sour Gummy', sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -160,7 +160,7 @@ footer .email i:hover {
   }
 
 footer .phone a {
-  color: red;
+  color: #235bae;
   font-family: 'Sour Gummy', sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -306,7 +306,7 @@ html {
 
 .downloadbutton {
   font-family: 'Sour Gummy', sans-serif;
-  background-color: #FF0000;
+  background-color: #3165b2;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -318,7 +318,7 @@ html {
 }
 
 .downloadbutton:hover {
-  background-color: #cc0000;
+  background-color: #34419e;
   transform: scale(1.05);
 }
 
@@ -681,4 +681,26 @@ section {
   max-width: 150px;
   transform: scale(0.4);
 }
+}
+
+#totodile {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#totodile.animate {
+  transform: translateX(100px);
+}
+
+#wrf {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#wrf.animate {
+  transform: translateY(-50px);
+}
+
+.namenav img {
+  vertical-align: middle;
 }
