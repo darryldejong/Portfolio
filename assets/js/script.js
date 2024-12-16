@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         number: { value: 60, density: { enable: true, value_area: 800 } },
         color: { value: config.color },
         shape: { type: "circle" },
-        opacity: { value: 0.5 },
+        opacity: { value: 0.7 },
         size: { value: 3, random: true },
         line_linked: { enable: true, distance: 100, color: config.color, opacity: 0.4, width: 1 },
         move: { enable: true, speed: 2, direction: "none" },
@@ -80,13 +80,12 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   const hackerrankCerts = [
-    { text: "Hackerrank Python (Basic) - okt. 2024", color: "green" },
+    { text: "Hackerrank Python (Basic) - okt. 2024", color: "orange" },
     { text: "Hackerrank SQL (Basic) - okt. 2024", color: "red" },
     { text: "Hackerrank CSS (Basic) - okt. 2024", color: "blue" }
   ];
 
   let currentIndex = 0;
-
   const hackerrankIcon = document.getElementById("hackerrankicon");
   const hackerrankText = document.getElementById("hackerranktext");
   const leftArrow = document.getElementById("leftarrow");
@@ -130,27 +129,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updateCertificate(currentIndex);
 
+  const ciscoCerts = [
+    { text: "Cybersecurity Fundamentals - dec. 2024", link: "https://www.credly.com/badges/749c4ff2-f024-48dc-985c-76322e15c511/public_url", color: "#F33A6A" },
+    { text: "Cisco Linux Essentials - jul. 2023", link: "https://www.netacad.com/courses/linux-essentials?courseLang=en-US", color: "#0000ff" }
+  ];
+
+  let ciscoIndex = 0;
   const ciscoIcon = document.getElementById("ciscoicon");
   const ciscoCertText = ciscoIcon.nextElementSibling;
+  const leftArrowCisco = document.getElementById("leftarrow-cisco");
+  const rightArrowCisco = document.getElementById("rightarrow-cisco");
 
-  const ciscoLink = document.createElement('a');
-  ciscoLink.href = "https://www.netacad.com/courses/linux-essentials?courseLang=en-US";
-  ciscoLink.textContent = ciscoCertText.textContent;
-  ciscoLink.target = "_blank";
-  ciscoLink.style.color = 'inherit';
-  ciscoLink.style.textDecoration = 'none';
-  ciscoLink.style.cursor = 'pointer';
+  function updateCiscoCertificate(index) {
+    const currentCert = ciscoCerts[index];
+    ciscoIcon.style.color = currentCert.color;
+    
+    const ciscoLink = document.createElement('a');
+    ciscoLink.href = currentCert.link;
+    ciscoLink.textContent = currentCert.text;
+    ciscoLink.target = "_blank";
+    ciscoLink.style.color = 'inherit';
+    ciscoLink.style.textDecoration = 'none';
+    ciscoLink.style.cursor = 'pointer';
 
-  ciscoLink.addEventListener('mouseover', function() {
-    this.style.color = 'blue';
-    this.style.textDecoration = 'underline';
+    ciscoLink.addEventListener('mouseover', function() {
+      this.style.color = 'blue';
+      this.style.textDecoration = 'underline';
+    });
+    
+    ciscoLink.addEventListener('mouseout', function() {
+      this.style.color = 'inherit';
+      this.style.textDecoration = 'none';
+    });
+
+    ciscoCertText.innerHTML = '';
+    ciscoCertText.appendChild(ciscoLink);
+  }
+
+  leftArrowCisco.addEventListener("click", function() {
+    ciscoIndex = (ciscoIndex - 1 + ciscoCerts.length) % ciscoCerts.length;
+    updateCiscoCertificate(ciscoIndex);
   });
-  
-  ciscoLink.addEventListener('mouseout', function() {
-    this.style.color = 'inherit';
-    this.style.textDecoration = 'none';
+
+  rightArrowCisco.addEventListener("click", function() {
+    ciscoIndex = (ciscoIndex + 1) % ciscoCerts.length;
+    updateCiscoCertificate(ciscoIndex);
   });
 
-  ciscoCertText.innerHTML = '';
-  ciscoCertText.appendChild(ciscoLink);
+  updateCiscoCertificate(ciscoIndex);
+
 });
