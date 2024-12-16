@@ -15,7 +15,7 @@
   <div id="particlesabout"></div>
   <nav>
     <ul>
-      <li><a href="#aboutme" class="namenav">Darryl de Jong</a></li>
+      <li><a href="#aboutme" class="namenav">Darryl de Jong <img src="assets/img/Diddykong.gif" alt="diddykong"></a></li>
       <li><a href="#skills" class="skillsnav">Skills</a></li>
       <li><a href="#certifications" class="certificatenav">Certifications</a></li>
       <li><a href="#projects" class="projectsnav">Projects</a></li>
@@ -25,9 +25,9 @@
 
   <!-- Aboutme -->
   <section id="aboutme" class="aboutme">
-    <div class="imageleft">
-      <img src="assets/img/Wrf.gif" alt="wrf">
-    </div>
+    <div class="imageleft" onclick="animateImageVertical()">
+      <img src="assets/img/Wrf.gif" alt="wrf" id="wrf">
+  </div>  
     <div class="aboutmetext">
       <h2>About me</h2>
       <div class="text-container">
@@ -38,15 +38,16 @@
       </p>
         <button class="downloadbutton" onclick="window.open('assets/docs/Resume.pdf', '_blank')">Open Resume</button>
     </div>
-    <div class="imageright">
-      <img src="assets/img/Totodile.gif" alt="totodile">
+    <div class="imageright" onclick="animateImage()">
+      <img src="assets/img/Totodile.gif" alt="totodile" id="totodile">
+  </div>  
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills">
     <div id="particlesskills"></div>
-    <h2>Skills</h2>
+    <h2>Skills <img src="assets/img/Flareon.gif" alt="flareon" class="skillsgif"></h2>
     <div class="skillscontainer">
       <div class="skill">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" />
@@ -87,39 +88,43 @@
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <div id="particlescertifications"></div>
-    <div>
-      <h2>Certifications</h2>
-      <p>Here are a few certificates I have obtained.</p>
-    </div>
-    <div class="certificationscontainer">
-      <div class="certificationsection">
-        <button id="leftarrow" aria-label="back">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="certificationcontent">
-          <i class="fab fa-hackerrank fa-3x" id="hackerrankicon"></i>
-          <p id="hackerranktext"></p>
-        </div>
-        <button id="rightarrow" aria-label="next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+<!-- Certifications -->
+<section id="certifications">
+  <div id="particlescertifications"></div>
+  <div>
+    <h2>Certifications <img src="assets/img/Jolteon.gif" alt="jolteon" class="certificationsgif"></h2>
+  </div>
+  <div class="certificationscontainer">
+    <div class="certificationsection">
+      <button id="leftarrow" aria-label="back">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="certificationcontent">
+        <i class="fab fa-hackerrank fa-3x" id="hackerrankicon"></i>
+        <p id="hackerranktext"></p>
       </div>
-      <div class="certificationsection">
-        <div class="certificationcontent">
-          <i class="fas fa-network-wired fa-3x" id="ciscoicon"></i>
-          <p>Cisco Linux Essentials - jul. 2023</p>
-        </a>
-        </div>
-      </div>
+      <button id="rightarrow" aria-label="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
-  </section>  
+    <div class="certificationsection">
+      <button id="leftarrow-cisco" aria-label="back">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="certificationcontent">
+        <i class="fa-solid fa-trophy fa-3x" id="ciscoicon"></i>
+        <p>Cisco Linux Essentials - jul. 2023</p>
+      </div>
+      <button id="rightarrow-cisco" aria-label="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
 
   <!-- Projects -->
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Projects <img src="assets/img/Vaporeon.gif" alt="vaporeon" class="projectsgif"></h2>
   <div class="projectgallery">
     <div class="project">
       <img src="assets/img/Project1.png" alt="project1">
@@ -152,7 +157,7 @@
 <footer id="contact">
   <div id="particlesfooter"></div>
   <div class="socialmedia">
-    <p>Find me on social media:</p>
+    <p>find me on social media:</p>
     <a href="https://www.linkedin.com/in/darryldejong/" class="linkedin" target="_blank">
       <i class="fab fa-linkedin fa-2x"></i>
     </a>
