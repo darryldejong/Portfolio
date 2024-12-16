@@ -179,3 +179,23 @@ document.addEventListener("DOMContentLoaded", function() {
   updateCiscoCertificate(ciscoIndex);
 
 });
+
+function animateImageVertical() {
+  const img = document.getElementById('wrf');
+  
+  img.classList.add('animate');
+  
+  setTimeout(() => {
+    img.classList.remove('animate');
+  }, 500);
+}
+
+function animateImage() {
+  const img = document.getElementById('totodile');
+  
+  img.classList.add('animate');
+  
+  setTimeout(() => {
+    img.classList.remove('animate');
+  }, 500);
+}
