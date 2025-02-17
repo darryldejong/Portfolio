@@ -204,22 +204,6 @@ footer .copyright {
   transform: scale(0.8);
 }
 
-.downloadbutton {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.downloadbutton:hover {
-  background-color: #45a049;
-}
-
 section {
   padding: 60px 20px;
   margin: 0 auto;
@@ -556,6 +540,96 @@ section {
 
 .text {
   display: inline-block;
+}
+
+#contactme {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+.left-section {
+  flex: 1;
+  padding-right: 20px;
+  margin-top: 100px;
+}
+
+.left-section h2 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.email-text a {
+  color: #6c5ce7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.right-section {
+  flex: 2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.right-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+  border: 3px solid #ccc;
+}
+
+.custom-send-button {
+  font-family: 'Sour Gummy', sans-serif;
+  background-color: #3165b2;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 300px;
+}
+
+.custom-send-button:hover {
+  background-color: #34419e;
+  transform: scale(1.05);
 }
 
 @keyframes pushTextLeft {
