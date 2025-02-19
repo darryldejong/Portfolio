@@ -29,7 +29,7 @@ nav a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sour Gummy', sans-serif;
 }
 
 nav li:first-child {
@@ -105,78 +105,6 @@ header, main, footer {
 a i:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center;
-  border-top: 1px solid #ddd;
-  margin-top: auto;
-}
-
-footer .socialmedia {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-footer .socialmedia p {
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-footer .socialmedia a {
-  margin: 0 10px;
-  color: #333;
-  text-decoration: none;
-}
-
-footer .email, footer .phone {
-  display: flex;
-  align-items: center;
-  color: rgb(24, 20, 20);
-}
-
-footer .email i, footer .phone i {
-  margin-right: 10px;
-}
-
-footer a {
-  color: #333;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .socialmedia p {
-  color: #235bae;
-  font-family: 'Sour Gummy', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-footer .email a {
-  color: #235bae;
-  font-family: 'Sour Gummy', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-footer .email i:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-  }
-
-footer .phone a {
-  color: #235bae;
-  font-family: 'Sour Gummy', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 footer .copyright p {
@@ -336,7 +264,7 @@ html {
   font-size: 1.2rem;
   color: #555;
   margin-top: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sour Gummy', sans-serif;
 }
 
 .projectgallery {
@@ -494,7 +422,9 @@ button:hover {
 #particlesabout,
 #particlesskills,
 #particlescertifications,
-#particlesfooter {
+#particlesfooter,
+#particlescontact,
+#particlesprojects {
   position: absolute;
   top: 0;
   left: 0;
@@ -555,7 +485,7 @@ section {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
+  max-width: 1025px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -569,7 +499,6 @@ section {
 
 .left-section h2 {
   font-size: 24px;
-  color: #222;
   margin-bottom: 10px;
 }
 
@@ -578,8 +507,12 @@ section {
   color: #666;
 }
 
+.contacttext {
+  margin-top: -80px;
+}
+
 .email-text a {
-  color: #6c5ce7;
+  color: #4288f9;
   font-weight: bold;
   text-decoration: none;
 }
@@ -630,6 +563,55 @@ input, textarea {
 .custom-send-button:hover {
   background-color: #34419e;
   transform: scale(1.05);
+}
+
+.trainer-img {
+  width: 200px;
+  height: auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.flex-center i {
+  position: relative;
+  top: -50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon-3d {
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-3d:hover {
+  transform: translateY(-5px);
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.fa-spotify {
+  color: #1DB954;
+}
+
+.fa-linkedin {
+  color: #0077B5;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: -90px;
 }
 
 @keyframes pushTextLeft {
@@ -794,7 +776,7 @@ input, textarea {
   footer .copyright {
     position: static;
     transform: none;
-    margin-top: 15px;
+    margin-top: -40px;
   }
 
   section {
@@ -807,6 +789,10 @@ input, textarea {
 
   #certifications h2 {
     font-size: 2rem;
+  }
+
+  .social-text {
+    margin-top: -40px;
   }
 }
 
@@ -837,6 +823,16 @@ input, textarea {
   max-width: 150px;
   transform: scale(0.4);
 }
+
+footer .copyright {
+  position: static;
+  transform: none;
+  margin-top: -40px;
+}
+
+.social-text {
+  margin-top: -40px;
+}
 }
 
 #totodile {
@@ -859,4 +855,89 @@ input, textarea {
 
 .namenav img {
   vertical-align: middle;
+}
+
+#contactme {
+  display: none;
+}
+
+#contactme h2.show-on-mobile {
+  display: block;
+}
+
+/* 1024px (desktop) */
+@media (min-width: 1024px) {
+  #contactme {
+      display: block;
+  }
+
+  #contactme h2.show-on-mobile {
+      display: none;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.social-text {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.icon-3d {
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  margin-left: -25px;
+}
+
+.icon-3d:hover {
+  transform: translateY(-5px);
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.fa-spotify {
+  color: #1DB954;
+}
+
+.fa-linkedin {
+  color: #0077B5;
+}
+
+.copyright {
+  text-align: center;
+  padding: 0rem 0;
+}
+
+.social-text {
+  font-family: 'Sour Gummy', sans-serif;
+  padding-bottom: 90px;
+}
+
+@media (max-width: 768px) { /* Tablets en kleinere schermen */
+  .flex-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-center a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) { /* Telefoons en kleinere schermen */
+  .flex-center a {
+    margin-bottom: 15px;
+  }
 }
