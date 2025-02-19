@@ -47,18 +47,20 @@ document.addEventListener("DOMContentLoaded", function() {
     { id: "particlesabout", color: "#ff0c00" },
     { id: "particlesskills", color: "#29cc29" },
     { id: "particlescertifications", color: "#0000ff" },
-    { id: "particlesfooter", color: "#fc83e5" }
+    { id: "particlesfooter", color: "#fc83e5" },
+    { id: "particlescontact", color: "#ffeb00" },
+    { id: "particlesprojects", color: "#0eff8e" }
   ];
 
   particlesConfigurations.forEach(config => {
     particlesJS(config.id, {
       particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
+        number: { value: 30, density: { enable: true, value_area: 800 } },
         color: { value: config.color },
         shape: { type: "circle" },
         opacity: { value: 0.7 },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 100, color: config.color, opacity: 0.4, width: 1 },
+        line_linked: { enable: true, distance: 100, color: config.color, opacity: 0.7, width: 1 },
         move: { enable: true, speed: 2, direction: "none" },
       },
       interactivity: {
