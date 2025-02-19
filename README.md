@@ -17,7 +17,7 @@ Thank you to the artists for providing these sprites and for their generous perm
 - [{F2U} - Vaporeon Icon](https://www.deviantart.com/leokatana/art/F2U-Vaporeon-Icon-516169755)
 - [{F2U} - Umbreon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Umbreon-Pixel-Icon-671183499)
 - [Charizard GIF Image](https://www.deviantart.com/xxangelicespeonxx/art/Charizard-GIF-Image-313364356) by **xXAngelicEspeonXx**
-- [Gold's Team Image](https://www.deviantart.com/xxangelicespeonxx/art/Charizard-GIF-Image-313364356) by **Maximus5432**
+- [Gold's Team Image](https://www.deviantart.com/maximus5432/art/Gold-s-Team-209886660) by **Maximus5432**
 
 #### Disclaimer
 The images used in this project are owned by their respective artists. All rights are reserved. If you're the owner of an image and wish to have it removed or modified, please contact me.
