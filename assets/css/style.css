@@ -176,7 +176,7 @@ section {
 }
 
 .project .githublink:hover {
-  color: #e31e1e;
+  color: #344ba7;
 }
 
 html {
@@ -243,7 +243,7 @@ html {
 }
 
 .downloadbutton:hover {
-  background-color: #34419e;
+  background-color: #3a5196;
   transform: scale(1.05);
 }
 
@@ -255,8 +255,8 @@ html {
 }
 
 #projects h2 {
-  font-size: 2.5rem;
-  color: #262525;
+  color: #3F3B3B;
+  font-size: 36px;
   font-family: 'Sour Gummy', sans-serif;
 }
 
@@ -351,8 +351,9 @@ html {
 }
 
 #certifications h2 {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 36px;
+  color: #3F3B3B;
+  font-family: 'Sour Gummy', sans-serif;
 }
 
 #certifications p {
@@ -561,7 +562,7 @@ input, textarea {
 }
 
 .custom-send-button:hover {
-  background-color: #34419e;
+  background-color: #3a5196;
   transform: scale(1.05);
 }
 
