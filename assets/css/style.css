@@ -1,8 +1,9 @@
 .namenav {
-  color: #235bae;
+  color: #2f78de;
   font-family: 'Sour Gummy', sans-serif;
   font-size: 34px;
   font-weight: bold;
+  text-shadow: 3px 3px 5px #0a0a0a; /* Rode schaduw */
 }
 
 nav {
@@ -44,16 +45,6 @@ nav li:first-child {
   overflow: hidden;
 }
 
-#particlesjs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: transparent;
-}
-
 header, main, footer {
   position: relative;
   z-index: 1;
@@ -62,17 +53,20 @@ header, main, footer {
 .aboutmetext {
   font-family: 'Sour Gummy', sans-serif;
   font-size: 18px;
+  color:#161515;
 }
 
 .aboutmetext h1 {
-  color:#21a5f7
+  color: #40a3ea;
+  text-shadow: 3px 3px 5px #000000;
 }
+
 .aboutmetext h3 {
-  color:#007bff
+  color:#2abfed;
+  text-shadow: 3px 3px 5px #000000;
 }
 
 .text-container {
-  color: #093056;
   font-family: 'Sour Gummy', sans-serif;
   font-size: 20px;
 }
@@ -82,24 +76,15 @@ header, main, footer {
     color: rgb(63, 59, 59);
   }
 
-.linkedin i {
-  color: #0077B5;
-}
-
-.github i {
-  color: #000000;
-}
-
-.whatsapp i {
-  color: #25D366;
-}
-
-.playstation i {
-  color: #003791;
-}
-
-.discord i {
-  color: #7289DA;
+  .background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(to bottom, #0059e9, #003b99); /* Van blauw naar donkerblauw */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    z-index: -1;
 }
 
 a i:hover {
@@ -420,12 +405,8 @@ button:hover {
   color: rgb(52, 122, 212);
 }
 
-#particlesabout,
-#particlesskills,
-#particlescertifications,
 #particlesfooter,
-#particlescontact,
-#particlesprojects {
+#particlescontact {
   position: absolute;
   top: 0;
   left: 0;
@@ -582,31 +563,6 @@ input, textarea {
   position: relative;
   top: -50px;
   transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.icon-3d {
-  padding: 10px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.icon-3d:hover {
-  transform: translateY(-5px);
-}
-
-.fa-github {
-  color: #333;
-}
-
-.fa-twitter {
-  color: #1DA1F2;
-}
-
-.fa-spotify {
-  color: #1DB954;
-}
-
-.fa-linkedin {
-  color: #0077B5;
 }
 
 .copyright {
@@ -890,30 +846,21 @@ footer .copyright {
   margin-right: 1rem;
 }
 
-.icon-3d {
-  padding: 10px;
-  transition: transform 0.2s ease-in-out;
-  margin-left: -25px;
-}
-
 .icon-3d:hover {
   transform: translateY(-5px);
 }
 
-.fa-github {
-  color: #333;
+.icon-contact {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: -50px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  left: -20px;
 }
 
-.fa-twitter {
-  color: #1DA1F2;
-}
-
-.fa-spotify {
-  color: #1DB954;
-}
-
-.fa-linkedin {
-  color: #0077B5;
+.icon-contact:hover {
+  transform: translateX(10px);
 }
 
 .copyright {
@@ -921,9 +868,11 @@ footer .copyright {
   padding: 0rem 0;
 }
 
+
 .social-text {
   font-family: 'Sour Gummy', sans-serif;
   padding-bottom: 90px;
+  color:#100e0e;
 }
 
 @media (max-width: 768px) { /* Tablets en kleinere schermen */
