@@ -44,12 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const particlesConfigurations = [
-    { id: "particlesabout", color: "#ff0c00" },
-    { id: "particlesskills", color: "#29cc29" },
-    { id: "particlescertifications", color: "#0000ff" },
     { id: "particlesfooter", color: "#fc83e5" },
-    { id: "particlescontact", color: "#ffeb00" },
-    { id: "particlesprojects", color: "#0eff8e" }
+    { id: "particlescontact", color: "#ffeb00" }
   ];
 
   particlesConfigurations.forEach(config => {
