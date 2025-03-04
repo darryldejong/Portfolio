@@ -247,3 +247,17 @@ function shuffleTextEffect(element, duration = 1000) {
 document.getElementById("shuffleText").addEventListener("mouseenter", function () {
     shuffleTextEffect(this);
 });
+
+function adjustTextBasedOnWidth() {
+  const contactText = document.getElementById('contact-text');
+  
+  if (window.innerWidth < 1024) {
+    contactText.innerHTML = 'Reach out for work or anything else <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image">';
+  } else {
+    contactText.innerHTML = 'If you want to get in touch with me for work or anything else, feel free to send me a message <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image">';
+  }
+}
+
+window.addEventListener('load', adjustTextBasedOnWidth);
+
+window.addEventListener('resize', adjustTextBasedOnWidth);
