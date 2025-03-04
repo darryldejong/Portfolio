@@ -83,7 +83,7 @@ header, main, footer {
     left: 0;
     width: 100%;
     height: 750px;
-    background: linear-gradient(to bottom, #0059e9, #003b99); /* Van blauw naar donkerblauw */
+    background: linear-gradient(to bottom, #0059e9, #003b99);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     z-index: -1;
 }
@@ -657,11 +657,39 @@ input, textarea {
   }
 
   .project {
-    height: 350px;
+    max-width: 600px;
+    height: auto;
   }
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-left: 20%;
+}
+.left-section, .right-section {
+  width: 80%;
+  margin: 10px 0;
 }
 
-/* Telefoon*/
+.contacttext, h3 {
+  font-size: 1.1rem;
+}
+
+input, textarea {
+  font-size: 0.95rem;
+}
+
+.contacttext {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 1px;
+  margin-left: 80px;
+}
+}
+
+/* 767px (telefoons) */
 @media screen and (max-width: 767px) {
   nav {
     flex-direction: column;
@@ -763,9 +791,40 @@ input, textarea {
   .social-text {
     margin-top: -40px;
   }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+  .left-section, .right-section {
+    width: 80%;
+    margin: 10px 0;
+  }
+  
+  .contacttext, h3 {
+    font-size: 1.1rem;
+  }
+
+  .contacttext {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 1px; 
+  }
+  
+  input, textarea {
+    font-size: 0.95rem;
+  }
+
+  .custom-send-button {
+    width: auto;
+    height: auto;
+  }  
 }
 
-/* Telefoon klein*/
+/* 375px (kleine telefoons) */
 @media screen and (max-width: 375px) {
   .namenav {
     font-size: 20px;
@@ -802,6 +861,41 @@ footer .copyright {
 .social-text {
   margin-top: -40px;
 }
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.left-section, .right-section {
+  width: 80%;
+  margin: 10px 0;
+}
+
+.contacttext, h3 {
+  font-size: 1.1rem;
+}
+
+.contacttext {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 1px; 
+}
+
+.email-text {
+  margin-right: 30px;
+}
+
+input, textarea {
+  font-size: 0.95rem;
+}
+
+.custom-send-button {
+  width: auto;
+  height: auto;
+}  
 }
 
 #totodile {
@@ -824,14 +918,6 @@ footer .copyright {
 
 .namenav img {
   vertical-align: middle;
-}
-
-#contactme {
-  display: none;
-}
-
-#contactme h2.show-on-mobile {
-  display: block;
 }
 
 /* 1024px (desktop) */
@@ -887,7 +973,7 @@ footer .copyright {
   color:#100e0e;
 }
 
-@media (max-width: 768px) { /* Tablets en kleinere schermen */
+@media (max-width: 768px) { /* 768px (tablets) */
   .flex-center {
     flex-direction: column;
     align-items: center;
@@ -898,7 +984,7 @@ footer .copyright {
   }
 }
 
-@media (max-width: 480px) { /* Telefoons en kleinere schermen */
+@media (max-width: 480px) { /* 480px (telefoons) */
   .flex-center a {
     margin-bottom: 15px;
   }
