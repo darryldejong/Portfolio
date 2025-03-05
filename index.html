@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  
+<!-- Meta property -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio van een frontend webdeveloper, gespecialiseerd in het bouwen van dynamische websites met code of WordPress.">
@@ -25,7 +28,12 @@
   <meta name="twitter:description" content="Portfolio van een frontend webdeveloper, gespecialiseerd in het bouwen van dynamische websites met code of WordPress.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/darryldejong/Portfolio/main/assets/img/Image.png">
 
+<!-- Title -->
+
   <title>Darryl de Jong | Portfolio</title>
+
+<!-- Links -->
+
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -33,9 +41,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
 </head>
+
+<!-- Body -->
+
 <body>
   <div class="background-shape"></div>
-  <div id="particlesabout"></div>
   <nav>
     <ul>
       <li><a href="#aboutme" class="namenav">Darryl de Jong <img src="assets/img/Diddykong.gif" alt="diddykong"></a></li>
@@ -46,7 +56,8 @@
     </ul>
   </nav>
 
-  <!-- Aboutme -->
+<!-- Aboutme -->
+
   <section id="aboutme" class="aboutme">
     <div class="imageleft" onclick="animateImageVertical()" onkeydown="animateImageVertical()" tabindex="0">
       <img src="assets/img/Wrf.gif" alt="wrf" id="wrf">
@@ -70,9 +81,9 @@
     </div>
   </section>
 
-  <!-- Skills -->
+<!-- Skills -->
+
   <section id="skills">
-    <div id="particlesskills"></div>
     <h2>Skills <img src="assets/img/Flareon.gif" alt="flareon" class="skillsgif"></h2>
     <div class="skillscontainer">
       <div class="skill">
@@ -114,9 +125,9 @@
     </div>
   </section>
 
-<!-- Certifications -->
+  <!-- Certifications -->
+
 <section id="certifications">
-  <div id="particlescertifications"></div>
   <div>
     <h2>Certifications <img src="assets/img/Jolteon.gif" alt="jolteon" class="certificationsgif"></h2>
   </div>
@@ -149,8 +160,8 @@
 </section>
 
   <!-- Projects -->
+
 <section id="projects">
-  <div id="particlesprojects"></div>
   <h2>Projects <img src="assets/img/Vaporeon.gif" alt="vaporeon" class="projectsgif"></h2>
   <div class="projectgallery">
     <div class="project">
@@ -181,6 +192,7 @@
 </section>
 
   <!-- Contact -->
+
   <section id="contactme" class="contactme">
     <div id="particlescontact"></div>
     <div>
@@ -188,15 +200,12 @@
     </div>
 
     <div class="container">
-      <div class="left-section">
-        <h2 class="contacttext">
-          Ask me a question <img src="assets/img/Teddiursa.gif" alt="Teddiursa" />
-        </h2>
-        <img src="assets/img/Trainer.png" alt="Trainer" class="trainer-img">
-          <p class="email-text">Mail me at <a href="mailto:darryldjong@gmail.com">darryldjong@gmail.com</a></p>
-      </div>
       <div class="right-section">
-        <h3 id="contact-text">If you want to get in touch with me for work or anything else, feel free to send me a message <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image"></h3>
+        <h3 id="contact-text">
+          Reach out for work or anything else 
+          <br>
+          <a href="mailto:darryldjong@gmail.com" class="email-link">darryldjong@gmail.com <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image"> </a>
+        </h3>        
           <form action="mailto:je-email@gmail.com" method="post" enctype="text/plain">
               <input type="text" name="naam" placeholder="Name" required>
               <input type="email" name="email" placeholder="Email" required>
@@ -208,7 +217,8 @@
   </div>
   </section>
 
-<!-- Footer --> 
+<!-- Footer -->
+
 <footer id="contact">
   <div id="particlesfooter"></div>
   <div class="flex-center">
@@ -231,6 +241,8 @@
     <p>&copy; https://github.com/darryldejong/</p>
   </div>
 </footer>
+
+<!-- Scripts -->
 
 <script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70" crossorigin="anonymous"></script>
