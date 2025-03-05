@@ -225,7 +225,7 @@ html {
 
 .downloadbutton {
   background-color: #3165b2;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -233,6 +233,7 @@ html {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  font-family: 'Sour Gummy', sans-serif;
 }
 
 .downloadbutton:hover {
@@ -418,10 +419,8 @@ button:hover {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 1025px;
-  width: 100%;
-  top: 50%;
-  left: 50%;
+  width: 400px;
+  margin-left: 300px;
 }
 
 .left-section {
@@ -438,22 +437,6 @@ button:hover {
 .left-section p {
   font-size: 16px;
   color: #666;
-}
-
-.contacttext {
-  margin-top: -80px;
-  font-weight: bold;
-  text-shadow: 3px 3px 5px #fff5f5;
-}
-
-.contacttext img {
-  position: relative;
-}
-
-.email-text a {
-  color: #4288f9;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .right-section {
@@ -500,12 +483,6 @@ input, textarea {
 .custom-send-button:hover {
   background-color: #3a5196;
   transform: scale(1.05);
-}
-
-.trainer-img {
-  width: 200px;
-  height: auto;
-  margin-top: 30px;
 }
 
 .flex-center {
@@ -574,6 +551,10 @@ input, textarea {
   transform: translateX(10px);
 }
 
+form {
+  margin-top: 20px;
+}
+
 /* Keyframes for Responsive Layout */
 
 @keyframes pushTextLeft {
@@ -622,11 +603,6 @@ input, textarea {
     text-align: center;
   }
 
-  .imageleft {
-    max-width: 200px;
-    transform: scale(0.8);
-  }
-
   .imageright {
     max-width: 150px;
     transform: scale(0.6);
@@ -655,10 +631,13 @@ input, textarea {
   }
 
   .container {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: auto;
-    height: auto;
+    margin-left: 0px;
   }
 
 .left-section, .right-section {
@@ -666,29 +645,23 @@ input, textarea {
   margin: 10px 0;
 }
 
-.contacttext, h3 {
-  font-size: 1.1rem;
-}
-
 input, textarea {
   font-size: 0.95rem;
 }
 
-.contacttext {
-  display: none;
-}
-
-.trainer-img {
-  display: none;
-}
-
-.email-text {
-  display: none;
-}
-
 #contact-text {
   position: relative;
-  margin-top:  -75px;
+  margin-top:  -25px;
+  font-size: 18px;
+}
+.social-text {
+  margin-top: -40px;
+  margin-left: 20px;
+}
+
+.icon-contact {
+  margin-left: 40px
+
 }
 }
 
@@ -723,11 +696,6 @@ input, textarea {
   .imageright {
     max-width: 150px;
     transform: scale(0.4);
-  }
-
-  .imageleft {
-    max-width: 150px;
-    transform: scale(0.6);
   }
 
   .aboutmetext {
@@ -794,28 +762,22 @@ input, textarea {
 
   .social-text {
     margin-top: -40px;
+    margin-left: 20px;
   }
 
   .container {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: auto;
-    height: 400px;
+    margin-left: 0px;
   }
+  
   .left-section, .right-section {
     width: 80%;
     margin: 10px 0;
-  }
-  
-  .contacttext, h3 {
-    font-size: 1.1rem;
-  }
-
-  .contacttext {
-    align-items: center;
-    font-size: 1.2rem;
-    margin-top: 50px;
-    display: none;
   }
   
   input, textarea {
@@ -825,16 +787,19 @@ input, textarea {
   .custom-send-button {
     width: auto;
     height: auto;
-  }
-  
-  .trainer-img {
-    display: none;
+    font-size: 12px;
   }
 
-  .email-text {
-    display: none;
+  .icon-contact {
+    margin-left: 40px
   }
+
+  #contact-text {
+    position: relative;
+    margin-top:  -25px;
+    font-size: 15px;
   }
+}
 
 /* Media Queries for Responsive Layout 3 (768px, 480px) */
 
