@@ -1,3 +1,5 @@
+// JS
+
 document.addEventListener("DOMContentLoaded", function() {
 
   const links = document.querySelectorAll('a');
@@ -43,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // ParticlesJS
+
   const particlesConfigurations = [
     { id: "particlesfooter", color: "#fc83e5" },
     { id: "particlescontact", color: "#ffeb00" }
@@ -70,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
       retina_detect: true,
     });
   });
+
+  // Certifications
 
   const certificationLinks = {
     "Hackerrank Python (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
@@ -185,6 +191,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// Aboutme
+
 function animateImageVertical() {
   const img = document.getElementById('wrf');
   
@@ -243,6 +251,8 @@ function shuffleTextEffect(element, duration = 1000) {
         iteration += 1;
     }, 50);
 }
+
+// Contact
 
 document.getElementById("shuffleText").addEventListener("mouseenter", function () {
     shuffleTextEffect(this);
