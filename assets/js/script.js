@@ -49,19 +49,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const particlesConfigurations = [
     { id: "particlesfooter", color: "#fc83e5" },
-    { id: "particlescontact", color: "#ffeb00" }
+    { id: "particlescontact", color: "#144de7" }
   ];
 
   particlesConfigurations.forEach(config => {
     particlesJS(config.id, {
       particles: {
-        number: { value: 30, density: { enable: true, value_area: 800 } },
+        number: { value: 5, density: { enable: true, value_area: 100 } },
         color: { value: config.color },
         shape: { type: "circle" },
-        opacity: { value: 0.7 },
+        opacity: { value: 0.8 },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 100, color: config.color, opacity: 0.7, width: 1 },
-        move: { enable: true, speed: 2, direction: "none" },
+        line_linked: { enable: true, distance: 15, color: config.color, opacity: 0.7, width: 1 },
+        move: { enable: true, speed: 1, direction: "none" },
       },
       interactivity: {
         detect_on: "canvas",
@@ -252,19 +252,18 @@ function shuffleTextEffect(element, duration = 1000) {
     }, 50);
 }
 
-// Contact
-
-document.getElementById("shuffleText").addEventListener("mouseenter", function () {
-    shuffleTextEffect(this);
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.getElementById("shuffleText");
+  textElement.addEventListener("mouseenter", () => shuffleTextEffect(textElement));
 });
+
+// Contact
 
 function adjustTextBasedOnWidth() {
   const contactText = document.getElementById('contact-text');
   
   if (window.innerWidth < 1024) {
-    contactText.innerHTML = 'Reach out for work or anything else <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image">';
-  } else {
-    contactText.innerHTML = 'If you want to get in touch with me for work or anything else, feel free to send me a message <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image">';
+    contactText.innerHTML = 'Reach out for work or anything else <br><a href="mailto:darryldjong@gmail.com" class="email-link">darryldjong@gmail.com <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image"></a>';
   }
 }
 
