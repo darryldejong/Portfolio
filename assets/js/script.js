@@ -1,4 +1,4 @@
-// JS
+// Js
 
 document.addEventListener("DOMContentLoaded", function() {
 
