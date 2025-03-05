@@ -33,7 +33,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
 </head>
-<body background="">
+<body>
   <div class="background-shape"></div>
   <div id="particlesabout"></div>
   <nav>
@@ -48,7 +48,7 @@
 
   <!-- Aboutme -->
   <section id="aboutme" class="aboutme">
-    <div class="imageleft" onclick="animateImageVertical()">
+    <div class="imageleft" onclick="animateImageVertical()" onkeydown="animateImageVertical()" tabindex="0">
       <img src="assets/img/Wrf.gif" alt="wrf" id="wrf">
   </div>  
 
@@ -64,7 +64,7 @@
       </p>
         <button class="downloadbutton" onclick="window.open('assets/docs/Resume.pdf', '_blank')">Open Resume</button>
     </div>
-    <div class="imageright" onclick="animateImage()">
+    <div class="imageright" onclick="animateImage()" onkeydown="animateImage()" tabindex="0">
       <img src="assets/img/Totodile.gif" alt="totodile" id="totodile">
   </div>  
     </div>
@@ -76,39 +76,39 @@
     <h2>Skills <img src="assets/img/Flareon.gif" alt="flareon" class="skillsgif"></h2>
     <div class="skillscontainer">
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML Svg" />
         <p>HTML</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS Svg" />
         <p>CSS</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Javascript Svg" />
         <p>JavaScript</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js Svg" />
         <p>Node.js</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python Svg" />
         <p>Python</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git Svg" />
         <p>Git</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code Svg" />
         <p>VS Code</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure Svg" />
         <p>Azure</p>
       </div>
       <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="Windows 11 Svg" />
         <p>Windows 11</p>
       </div>
     </div>
@@ -191,8 +191,8 @@
       <div class="left-section">
         <h2 class="contacttext">
           Ask me a question <img src="assets/img/Teddiursa.gif" alt="Teddiursa" />
-        </h2>        
-        <h2><img src="assets/img/Trainer.png" alt="Trainer" class="trainer-img"></h2>
+        </h2>
+        <img src="assets/img/Trainer.png" alt="Trainer" class="trainer-img">
           <p class="email-text">Mail me at <a href="mailto:darryldjong@gmail.com">darryldjong@gmail.com</a></p>
       </div>
       <div class="right-section">
@@ -233,5 +233,5 @@
 </footer>
 
 <script src="assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70" crossorigin="anonymous"></script>
 </body>
