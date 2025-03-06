@@ -20,7 +20,6 @@ Thank you to the artists for providing these sprites and for their generous perm
 - [{F2U} - Umbreon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Umbreon-Pixel-Icon-671183499)
 - [Charizard GIF Image](https://www.deviantart.com/xxangelicespeonxx/art/Charizard-GIF-Image-313364356) by **xXAngelicEspeonXx**
 - [New Pikachu sprite](https://www.deviantart.com/kagenosensei/art/New-Pikachu-sprite-140688632) by **KageNoSensei**
-- [Chimchar Sprite](https://www.deviantart.com/fizzno1998/art/Chimchar-Sprite-1115259085) by **FizzNo1998**
 
 #### Disclaimer
 The images used in this project are owned by their respective artists. All rights are reserved. If you're the owner of an image and wish to have it removed or modified, please contact me.
