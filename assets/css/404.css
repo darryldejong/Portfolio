@@ -47,8 +47,8 @@ button:hover {
 
 .chimchar-image {
     position: absolute;
-    left: -150px;
-    width: 50%;
+    left: -0px;
+    width: 30%;
     height: auto;
     z-index: 0;
     filter: drop-shadow(5px 5px 15px rgba(179, 68, 13, 0.914)) drop-shadow(-5px -5px 15px rgba(255, 2, 2, 0.2));
