@@ -22,6 +22,7 @@ Thank you to the artists for providing these sprites and for their generous perm
 - [Gold's Team Image](https://www.deviantart.com/maximus5432/art/Gold-s-Team-209886660) by **Maximus5432**
 - [New Pikachu sprite](https://www.deviantart.com/kagenosensei/art/New-Pikachu-sprite-140688632) by **KageNoSensei**
 - [Teddiursa Sprite](https://www.deviantart.com/hotblackangel/art/Teddiursa-Sprite-189056451) by **HotBlackAngel**
+- [Chimchar Sprite](https://www.deviantart.com/fizzno1998/art/Chimchar-Sprite-1115259085) by **FizzNo1998**
 
 #### Disclaimer
 The images used in this project are owned by their respective artists. All rights are reserved. If you're the owner of an image and wish to have it removed or modified, please contact me.
