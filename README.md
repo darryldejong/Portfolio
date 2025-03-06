@@ -19,9 +19,7 @@ Thank you to the artists for providing these sprites and for their generous perm
 - [{F2U} - Vaporeon Icon](https://www.deviantart.com/leokatana/art/F2U-Vaporeon-Icon-516169755)
 - [{F2U} - Umbreon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Umbreon-Pixel-Icon-671183499)
 - [Charizard GIF Image](https://www.deviantart.com/xxangelicespeonxx/art/Charizard-GIF-Image-313364356) by **xXAngelicEspeonXx**
-- [Gold's Team Image](https://www.deviantart.com/maximus5432/art/Gold-s-Team-209886660) by **Maximus5432**
 - [New Pikachu sprite](https://www.deviantart.com/kagenosensei/art/New-Pikachu-sprite-140688632) by **KageNoSensei**
-- [Teddiursa Sprite](https://www.deviantart.com/hotblackangel/art/Teddiursa-Sprite-189056451) by **HotBlackAngel**
 - [Chimchar Sprite](https://www.deviantart.com/fizzno1998/art/Chimchar-Sprite-1115259085) by **FizzNo1998**
 
 #### Disclaimer
