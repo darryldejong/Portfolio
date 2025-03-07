@@ -171,7 +171,7 @@ section {
 }
 
 .project .githublink:hover {
-  color: #344ba7;
+  color: #1a3ca3;
 }
 
 html {
@@ -413,6 +413,11 @@ button:hover {
   font-size: 1.5rem;
 }
 
+.email-link {
+  color: #2b509f;
+  text-decoration: underline;
+}
+
 .container {
   display: flex;
   background: white;
@@ -470,7 +475,8 @@ input, textarea {
 
 .custom-send-button {
   background-color: #3165b2;
-  color: white;
+  color: rgb(0, 0, 0);
+  font-family: 'Sour Gummy', sans-serif;
   padding: 12px;
   border-radius: 8px;
   font-size: 16px;
@@ -482,6 +488,7 @@ input, textarea {
 
 .custom-send-button:hover {
   background-color: #3a5196;
+  font-family: 'Sour Gummy', sans-serif;
   transform: scale(1.05);
 }
 
