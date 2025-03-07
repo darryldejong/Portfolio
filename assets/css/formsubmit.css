@@ -1,0 +1,86 @@
+body {
+    background: white;
+    color: rgb(63, 59, 59);
+    font-family: 'Sour Gummy', sans-serif;
+    text-shadow: 3px 3px 5px #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    color: #236cda;
+    text-shadow: 3px 3px 5px #000000;
+    font-weight: bold;
+}
+
+.successfully {
+    color: rgb(19, 158, 68);
+}
+
+button {
+    background-color: #1b63d0;
+    color: #222020;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+button:hover {
+    background-color: #2962b7;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+
+.pikathumbsup-image {
+    position: absolute;
+    border: none;
+    left: -0px;
+    width: 30%;
+    height: auto;
+    z-index: 0;
+    filter: drop-shadow(5px 5px 15px rgba(37, 71, 165, 0.704)) drop-shadow(-5px -5px 15px rgba(255, 255, 255, 0.655))
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+
+    h1 {
+        position: absolute;
+        font-size: 40px;
+        top: 10vh
+    }
+
+    p {
+        position: absolute;
+        top: 45vh;
+        display: block;
+    }
+
+    button {
+        position: absolute;
+        top: 35vh;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .pikathumbsup-image {
+        width: 60%;
+        left: 20vw;
+        top: 55vh;
+    }
+}
