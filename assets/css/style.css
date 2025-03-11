@@ -530,12 +530,14 @@ input, textarea {
   transform: translateX(100px);
 }
 
-#wrf {
+#cobalt {
   transition: transform 0.5s ease;
   cursor: pointer;
+  margin-right: 20px;
+  width: 125px;
 }
 
-#wrf.animate {
+#cobalt.animate {
   transform: translateY(-50px);
 }
 
@@ -779,7 +781,7 @@ input, textarea {
   text-shadow: 3px 3px 5px #000000;
   font-weight: bold;
 }
-#wrf {
+#cobalt {
   display: none;
 }
 
@@ -980,7 +982,7 @@ nav ul li {
   line-height: 0;
 }
 
-#wrf {
+#cobalt {
   display: none;
 }
 
