@@ -1,10 +1,11 @@
-/* Last updated on March 7, 2025 at 16:09 */
+/* Main CSS file - Layout, structure, and design */
 
 .namenav {
   color: #2f78de;
   font-size: 34px;
   font-weight: bold;
   text-shadow: 3px 3px 5px #000000;
+  margin-top: -5px;
 }
 
 nav {
@@ -13,16 +14,25 @@ nav {
   font-size: 24px;
 }
 
+.nameul {
+  float: left;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: flex-end;
+  float: right;
 }
 
 nav li {
   float: left;
+}
+
+li {
+  list-style-type: none;
 }
 
 nav a {
@@ -31,10 +41,6 @@ nav a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-nav li:first-child {
-  margin-right: auto;
 }
 
 .aboutme {
@@ -426,8 +432,10 @@ button:hover {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  margin-left: 300px;
+  width: auto;
+  margin-left: 0px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .left-section {
@@ -564,6 +572,8 @@ form {
   margin-top: 20px;
 }
 
+/* Cookie Consent Banner */
+
 .cookie {
   width: 420px;
   height: auto;
@@ -623,7 +633,7 @@ form {
   background-color: #c0392b;
 }
 
-/* Keyframes for Responsive Layout */
+/* Text animation: 'SKILLED FRONT-END WEB DEVELOPER' */
 
 @keyframes pushTextLeft {
   0% {
@@ -639,24 +649,6 @@ form {
 
 .moved {
   animation: pushTextLeft 1s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .intro-text {
-      margin-top: -8rem;
-  }
-  
-  .intro-text h1 {
-      font-size: 2.5rem;
-  }
-  
-  .intro-text h2 {
-      font-size: 1.4rem;
-  }
-  
-  .intro-text p {
-      font-size: 1.2rem;
-  }
 }
 
 /* Media Queries for Responsive Layout */
@@ -685,8 +677,30 @@ form {
     gap: 15px;
   }
 
+  .container {
+    display: flex;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+  }
+
   section {
     padding: 40px 10px;
+  }
+
+  #skills {
+    margin-top: -100px;
+  }
+
+  #projects {
+    margin-top: -75px;
+  }
+
+  #contactme {
+    margin-top: -100px;
   }
 
   #projects .projectgallery {
@@ -696,16 +710,6 @@ form {
   .project {
     max-width: 600px;
     height: auto;
-  }
-
-  .container {
-    display: flex;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: auto;
-    margin-left: 0px;
   }
 
 .left-section, .right-section {
@@ -728,21 +732,13 @@ input, textarea {
 }
 
 .icon-contact {
-  margin-left: 40px
-
-}
-
-.aboutmetext h1 {
-  color: #40a3ea;
-  text-shadow: 3px 3px 5px #ffffff;
-  font-weight: bold;
-}
-
-.aboutmetext h3 {
-  color:#2abfed;
-  text-shadow: 3px 3px 5px #ffffff;
-  font-weight: bold;
-}
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: -70px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    margin-left: 35px;
+  }
 
 .cookie {
   width: 300px;
@@ -768,29 +764,48 @@ input, textarea {
   align-items: center;
   margin-top: 20px !important;
 }
+
+.namenav {
+  margin-top: -10px;
+}
+
+.aboutmetext h1 {
+  color: #40a3ea;
+  text-shadow: 3px 3px 5px #000000;
+  font-weight: bold;
+}
+
+.aboutmetext h3 {
+  color:#2abfed;
+  text-shadow: 3px 3px 5px #000000;
+  font-weight: bold;
+}
+#wrf {
+  display: none;
+}
+
+#totodile {
+  margin-top: -125px;
+}
+
+.ul {
+  display: none;
+}
 }
 
 /* Media Queries for Responsive Layout 2 */
 
 @media screen and (max-width: 767px) {
-  nav {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .ul {
+    display: none;
   }
 
   .namenav {
     font-size: 24px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
-  }
-
-  nav li {
-    float: none;
-    margin: 10px 0;
+    margin-left: -15px;
+    position: relative;
   }
 
   .aboutme {
@@ -806,6 +821,21 @@ input, textarea {
   .aboutmetext {
     font-size: 16px;
     padding: 0 15px;
+  }
+
+  #skills {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5em;
+    margin-top: -100px;
+  }
+
+  #projects {
+    margin-top: -100px;
+  }
+
+  #contactme {
+    margin-top: -100px;
   }
 
   .skillscontainer {
@@ -850,7 +880,7 @@ input, textarea {
   footer .copyright {
     position: static;
     transform: none;
-    margin-top: -40px;
+    margin-top: -90px;
   }
 
   section {
@@ -866,18 +896,18 @@ input, textarea {
   }
 
   .social-text {
-    margin-top: -40px;
+    margin-top: -50px;
     margin-left: 20px;
   }
 
   .container {
     display: flex;
     background: white;
-    padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: auto;
     margin-left: 0px;
+    height: 375px;
   }
   
   .left-section, .right-section {
@@ -896,24 +926,24 @@ input, textarea {
   }
 
   .icon-contact {
-    margin-left: 40px
+    margin-left: 35px;
   }
 
   #contact-text {
     position: relative;
-    margin-top:  -25px;
+    margin-top:  -50px;
     font-size: 15px;
   }
 
   .aboutmetext h1 {
     color: #40a3ea;
-    text-shadow: 3px 3px 5px #ffffff;
+    text-shadow: 3px 3px 5px #000000;
     font-weight: bold;
   }
   
   .aboutmetext h3 {
     color:#2abfed;
-    text-shadow: 3px 3px 5px #ffffff;
+    text-shadow: 3px 3px 5px #000000;
     font-weight: bold;
   }
 
@@ -940,6 +970,23 @@ input, textarea {
     gap: 10px;
     align-items: center;
     margin-top: 20px !important;
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav ul li {
+  text-align: left;
+  line-height: 0;
+}
+
+#wrf {
+  display: none;
+}
+
+#totodile {
+  margin-top: -150px;
 }
 }
 
