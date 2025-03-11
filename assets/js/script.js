@@ -1,6 +1,8 @@
-// Js
+// Core JavaScript functionality of the website
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  // Underline text
 
   const links = document.querySelectorAll('a');
 
@@ -25,12 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Smooth scroll
+
   const scrollToSection = (id) => {
     const section = document.querySelector(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  // Href sections
 
   const linksArray = [
     { selector: 'a[href="#projects"]', target: '#projects' },
@@ -194,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Aboutme
 
 function animateImageVertical() {
-  const img = document.getElementById('wrf');
+  const img = document.getElementById('cobalt');
   
   img.classList.add('animate');
   
