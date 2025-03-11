@@ -11,7 +11,7 @@
 
 Thank you to the artists for providing these sprites and for their generous permission to use them. 🐮
 #### Credits
-- [Free Sprite Animation for WFR98](https://www.deviantart.com/sussssusauaadjjjjjki/art/Free-Sprite-animation-for-WFR98-954017643) by **sussssusauaadjjjjjki**  
+- [Cobalt Running](https://www.deviantart.com/cyberguy64/art/Cobalt-Running-572862045) by **Cyberguy64**  
 - [FREE Bouncy Totodile Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Totodile-Icon-760358219) by **kattling**
 - [Diddy Kong Idle Sprite](https://www.deviantart.com/xugggys/art/Diddy-Kong-Idle-Sprite-173218620) by **Xugggys**
 - [{F2U} - Flareon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Flareon-Pixel-Icon-670091180) by **LeoKatana**
