@@ -45,7 +45,7 @@ button:hover {
     align-items: center;
 }
 
-.pikathumbsup-image {
+.Mudkip {
     position: absolute;
     border: none;
     left: -0px;
@@ -78,7 +78,7 @@ button:hover {
         padding: 10px 20px;
     }
 
-    .pikathumbsup-image {
+    .Mudkip {
         width: 60%;
         left: 20vw;
         top: 55vh;
