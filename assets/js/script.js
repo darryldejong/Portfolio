@@ -269,7 +269,7 @@ function adjustTextBasedOnWidth() {
   const contactText = document.getElementById('contact-text');
   
   if (window.innerWidth < 1024) {
-    contactText.innerHTML = 'Reach out for work or anything else <br><a href="mailto:darryldjong@gmail.com" class="email-link">darryldjong@gmail.com <img src="assets/img/Pikachu.png" alt="Pikachu" class="pikachu-image"></a>';
+    contactText.innerHTML = 'Reach out for work or anything else <br><span class="email-link">darryldjong@gmail.com <img src="assets/img/Pikachu.webp" alt="Pikachu" class="pikachu-image"></span>';
   }
 }
 
