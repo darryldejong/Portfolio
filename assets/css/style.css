@@ -66,7 +66,7 @@ header, main, footer {
   text-shadow: 3px 3px 5px #000000;
 }
 
-.aboutmetext h3 {
+.aboutmetext h2 {
   color:#2abfed;
   text-shadow: 3px 3px 5px #000000;
 }
@@ -136,6 +136,7 @@ section {
   padding: 4rem 2rem;
   background-color: #f4f4f4;
   text-align: center;
+  margin-top: -50px;
 }
 
 #projects .projectgallery {
@@ -419,6 +420,7 @@ button:hover {
   text-align: center;
   padding: 50px;
   font-size: 1.5rem;
+  margin-top: -100px;
 }
 
 .email-link {
@@ -776,7 +778,7 @@ input, textarea {
   font-weight: bold;
 }
 
-.aboutmetext h3 {
+.aboutmetext h2 {
   color:#2abfed;
   text-shadow: 3px 3px 5px #000000;
   font-weight: bold;
@@ -942,7 +944,7 @@ input, textarea {
     font-weight: bold;
   }
   
-  .aboutmetext h3 {
+  .aboutmetext h2 {
     color:#2abfed;
     text-shadow: 3px 3px 5px #000000;
     font-weight: bold;
