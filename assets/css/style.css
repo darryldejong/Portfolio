@@ -1,4 +1,4 @@
-/* Main CSS file - Layout, structure, and design (last updated on March 12, 2025, at 12:51) */
+/* Main CSS file - Layout, structure, and design */
 
 .namenav {
   color: #2f78de;
@@ -69,6 +69,7 @@ header, main, footer {
 .aboutmetext h2 {
   color:#2abfed;
   text-shadow: 3px 3px 5px #000000;
+  font-size: 1.17em;
 }
 
 .text-container {
@@ -782,7 +783,9 @@ input, textarea {
   color:#2abfed;
   text-shadow: 3px 3px 5px #000000;
   font-weight: bold;
+  font-size: 1.17em;
 }
+
 #cobalt {
   display: none;
 }
@@ -948,6 +951,7 @@ input, textarea {
     color:#2abfed;
     text-shadow: 3px 3px 5px #000000;
     font-weight: bold;
+    font-size: 1.17em;
   }
 
   .cookie {
