@@ -1,8 +1,8 @@
-// Core JavaScript functionality of the website
+// JavaScript
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Underline text
+// Underline
 
   const links = document.querySelectorAll('a');
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Smooth scroll
+// Scroll
 
   const scrollToSection = (id) => {
     const section = document.querySelector(id);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Href sections
+// Href
 
   const linksArray = [
     { selector: 'a[href="#projects"]', target: '#projects' },
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // ParticlesJS
+// Particles
 
   const particlesConfigurations = [
-    { id: "particlesfooter", color: "#fc83e5" },
-    { id: "particlescontact", color: "#144de7" }
+    { id: "particles-footer", color: "#fc83e5" },
+    { id: "particles-contact", color: "#144de7" }
   ];
 
   particlesConfigurations.forEach(config => {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Certifications
+// Certificates
 
   const certificationLinks = {
     "Hackerrank Python (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
@@ -92,108 +92,108 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   const hackerrankCerts = [
-    { text: "Hackerrank Python (Basic) - okt. 2024", color: "orange" },
-    { text: "Hackerrank SQL (Basic) - okt. 2024", color: "red" },
-    { text: "Hackerrank CSS (Basic) - okt. 2024", color: "blue" },
-    { text: "Hackerrank Problem Solving (Basic) - dec. 2024", color: "purple" },
-    { text: "Hackerrank JavaScript (Basic) - dec. 2024", color: "green" }
+    { text: "Hackerrank SQL (Basic) - okt. 2024", color: "#0066CC" },
+    { text: "Hackerrank Python (Basic) - okt. 2024", color: "#2E8B57" },
+    { text: "Hackerrank CSS (Basic) - okt. 2024", color: "#E69500" },
+    { text: "Hackerrank Problem Solving (Basic) - dec. 2024", color: "#800080" },
+    { text: "Hackerrank JavaScript (Basic) - dec. 2024", color: "#008080" }
   ];
 
   let currentIndex = 0;
-  const hackerrankIcon = document.getElementById("hackerrankicon");
-  const hackerrankText = document.getElementById("hackerranktext");
-  const leftArrow = document.getElementById("leftarrow");
-  const rightArrow = document.getElementById("rightarrow");
+  const certificateIcon = document.getElementById("certificateicon");
+  const certificateText = document.getElementById("certificatetext");
+  const arrowLeft = document.getElementById("arrow-left");
+  const arrowRight = document.getElementById("arrow-right");
 
   function updateCertificate(index) {
     const currentCert = hackerrankCerts[index];
-    hackerrankIcon.style.color = currentCert.color;
+    certificateIcon.style.color = currentCert.color;
     
     const certLink = document.createElement('a');
     certLink.href = certificationLinks[currentCert.text];
     certLink.textContent = currentCert.text;
     certLink.target = "_blank";
-    certLink.style.color = 'inherit';
+    certLink.style.color = currentCert.color;
     certLink.style.textDecoration = 'none';
     certLink.style.cursor = 'pointer';
 
     certLink.addEventListener('mouseover', function() {
-      this.style.color = 'blue';
+      this.style.color = '#1a3ca3';
       this.style.textDecoration = 'underline';
     });
     
     certLink.addEventListener('mouseout', function() {
-      this.style.color = 'inherit';
+      this.style.color = currentCert.color;
       this.style.textDecoration = 'none';
     });
 
-    hackerrankText.innerHTML = '';
-    hackerrankText.appendChild(certLink);
+    certificateText.innerHTML = '';
+    certificateText.appendChild(certLink);
   }
 
-  leftArrow.addEventListener("click", function() {
+  arrowLeft.addEventListener("click", function() {
     currentIndex = (currentIndex - 1 + hackerrankCerts.length) % hackerrankCerts.length;
     updateCertificate(currentIndex);
   });
 
-  rightArrow.addEventListener("click", function() {
+  arrowRight.addEventListener("click", function() {
     currentIndex = (currentIndex + 1) % hackerrankCerts.length;
     updateCertificate(currentIndex);
   });
 
   updateCertificate(currentIndex);
 
-  const ciscoCerts = [
-    { text: "IBM Cybersecurity Fundamentals - dec. 2024", link: "https://www.credly.com/badges/749c4ff2-f024-48dc-985c-76322e15c511/public_url", color: "#F33A6A" },
-    { text: "Cisco Linux Essentials - jul. 2023", link: "https://www.netacad.com/courses/linux-essentials?courseLang=en-US", color: "#0000ff" },
-    { text: "Certified Secure Safe Internet - feb. 2025", link: "https://www.certifiedsecure.com/profile/CS-13022583670", color: "#3aff0a" },
-    { text: "Certified Secure Safe Internet Plus - feb. 2025", link: "https://www.certifiedsecure.com/profile/CS-13022583670", color: "#03fafe" },
-    { text: "Cisco Python Essentials 1 - jan. 2025", link: "https://www.credly.com/badges/6ab5b58e-9112-4419-8dda-f285c672ab98/public_url", color: "#fcff20" }
-  ];
+  const certificateCerts = [
+    { text: "IBM Cybersecurity Fundamentals - dec. 2024", link: "https://www.credly.com/badges/749c4ff2-f024-48dc-985c-76322e15c511/public_url", color: "#E91E63" },
+    { text: "Cisco Linux Essentials - jul. 2023", link: "https://www.netacad.com/courses/linux-essentials?courseLang=en-US", color: "#F1C40F" },
+    { text: "Certified Secure Safe Internet - feb. 2025", link: "https://www.certifiedsecure.com/profile/CS-13022583670", color: "#27AE60" },
+    { text: "Certified Secure Safe Internet Plus - feb. 2025", link: "https://www.certifiedsecure.com/profile/CS-13022583670", color: "#8E44AD" },
+    { text: "Cisco Python Essentials 1 - jan. 2025", link: "https://www.credly.com/badges/6ab5b58e-9112-4419-8dda-f285c672ab98/public_url", color: "#2980B9" }
+  ];  
 
-  let ciscoIndex = 0;
-  const ciscoIcon = document.getElementById("ciscoicon");
-  const ciscoCertText = ciscoIcon.nextElementSibling;
-  const leftArrowCisco = document.getElementById("leftarrow-cisco");
-  const rightArrowCisco = document.getElementById("rightarrow-cisco");
+  let certificateIndex = 0;
+  const trophyIcon = document.getElementById("trophyicon");
+  const certificateCertText = trophyIcon.nextElementSibling;
+  const arrowLeftTwo = document.getElementById("arrow-left-two");
+  const arrowRightTwo = document.getElementById("arrow-right-two");
 
-  function updateCiscoCertificate(index) {
-    const currentCert = ciscoCerts[index];
-    ciscoIcon.style.color = currentCert.color;
+  function updatecertificateCertificate(index) {
+    const currentCert = certificateCerts[index];
+    trophyIcon.style.color = currentCert.color;
     
-    const ciscoLink = document.createElement('a');
-    ciscoLink.href = currentCert.link;
-    ciscoLink.textContent = currentCert.text;
-    ciscoLink.target = "_blank";
-    ciscoLink.style.color = 'inherit';
-    ciscoLink.style.textDecoration = 'none';
-    ciscoLink.style.cursor = 'pointer';
+    const certificateLink = document.createElement('a');
+    certificateLink.href = currentCert.link;
+    certificateLink.textContent = currentCert.text;
+    certificateLink.target = "_blank";
+    certificateLink.style.color = currentCert.color;
+    certificateLink.style.textDecoration = 'none';
+    certificateLink.style.cursor = 'pointer';
 
-    ciscoLink.addEventListener('mouseover', function() {
-      this.style.color = 'blue';
+    certificateLink.addEventListener('mouseover', function() {
+      this.style.color = '#1a3ca3';
       this.style.textDecoration = 'underline';
     });
     
-    ciscoLink.addEventListener('mouseout', function() {
-      this.style.color = 'inherit';
+    certificateLink.addEventListener('mouseout', function() {
+      this.style.color = currentCert.color;
       this.style.textDecoration = 'none';
     });
 
-    ciscoCertText.innerHTML = '';
-    ciscoCertText.appendChild(ciscoLink);
+    certificateCertText.innerHTML = '';
+    certificateCertText.appendChild(certificateLink);
   }
 
-  leftArrowCisco.addEventListener("click", function() {
-    ciscoIndex = (ciscoIndex - 1 + ciscoCerts.length) % ciscoCerts.length;
-    updateCiscoCertificate(ciscoIndex);
+  arrowLeftTwo.addEventListener("click", function() {
+    certificateIndex = (certificateIndex - 1 + certificateCerts.length) % certificateCerts.length;
+    updatecertificateCertificate(certificateIndex);
   });
 
-  rightArrowCisco.addEventListener("click", function() {
-    ciscoIndex = (ciscoIndex + 1) % ciscoCerts.length;
-    updateCiscoCertificate(ciscoIndex);
+  arrowRightTwo.addEventListener("click", function() {
+    certificateIndex = (certificateIndex + 1) % certificateCerts.length;
+    updatecertificateCertificate(certificateIndex);
   });
 
-  updateCiscoCertificate(ciscoIndex);
+  updatecertificateCertificate(certificateIndex);
 
 });
 
@@ -263,7 +263,17 @@ document.addEventListener("DOMContentLoaded", () => {
   textElement.addEventListener("mouseenter", () => shuffleTextEffect(textElement));
 });
 
-// Cookie consent banner
+// Contact
+ 
+function adjustTextBasedOnWidth() {
+  const contactText = document.getElementById('contact-text');
+  
+  if (window.innerWidth < 1024) {
+    contactText.innerHTML = 'Reach out for work or anything else <br><span class="email-link">darryldjong@gmail.com <img src="assets/img/pikachu.webp" alt="Pikachu" class="pikachu-image"></span>';
+  }
+}
+
+// Cookies
 
 window.addEventListener('load', adjustTextBasedOnWidth);
 
