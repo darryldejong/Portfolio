@@ -263,16 +263,6 @@ document.addEventListener("DOMContentLoaded", () => {
   textElement.addEventListener("mouseenter", () => shuffleTextEffect(textElement));
 });
 
-// Contact
-
-function adjustTextBasedOnWidth() {
-  const contactText = document.getElementById('contact-text');
-  
-  if (window.innerWidth < 1024) {
-    contactText.innerHTML = 'Reach out for work or anything else <br><span class="email-link">darryldjong@gmail.com <img src="assets/img/pikachu.webp" alt="Pikachu" class="pikachu-image"></span>';
-  }
-}
-
 // Cookie consent banner
 
 window.addEventListener('load', adjustTextBasedOnWidth);
