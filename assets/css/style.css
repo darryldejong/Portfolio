@@ -1,4 +1,4 @@
-/* Main CSS file - Layout, structure, and design */
+/* CSS */
 
 @font-face {
   font-family: 'Sour Gummy';
@@ -389,12 +389,8 @@ button:hover {
   transform: translateY(-10px);
 }
 
-#ciscoicon {
-  color: rgb(52, 122, 212);
-}
-
-#particlesfooter,
-#particlescontact {
+#particles-footer,
+#particles-contact {
   position: absolute;
   top: 0;
   left: 0;
@@ -671,7 +667,7 @@ form {
   width: 50px;
 }
 
-#hackerranktext {
+#certificatetext {
   margin-top: 25px;
 }
 
