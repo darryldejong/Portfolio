@@ -1,5 +1,26 @@
 /* Last updated on March 12, 2025 at 12:53 */
 
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('../fonts/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('../fonts/SourGummy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('../fonts/SourGummy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
     background: white;
     color: rgb(63, 59, 59);
