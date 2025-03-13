@@ -1,5 +1,26 @@
 /* Main CSS file - Layout, structure, and design */
 
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('assets/fonts/SourGummy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('assets/fonts/SourGummy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sour Gummy';
+  src: url('assets/fonts/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 400; /* Dit is het standaard gewicht */
+  font-style: normal;
+}
+
 .namenav {
   color: #2f78de;
   font-size: 34px;
