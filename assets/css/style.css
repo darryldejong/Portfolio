@@ -2,20 +2,6 @@
 
 @font-face {
   font-family: 'Sour Gummy';
-  src: url('../fonts/SourGummy-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sour Gummy';
-  src: url('../fonts/SourGummy-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sour Gummy';
   src: url('../fonts/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -656,6 +642,23 @@ form {
 
 .cookie .reject:hover {
   background-color: #c0392b;
+}
+
+.arrow {
+  width: 40px;
+  margin-top: 10px;
+}
+
+.certificate {
+  width: 50px;
+}
+
+.trophy {
+  width: 50px;
+}
+
+#hackerranktext {
+  margin-top: 25px;
 }
 
 /* Text animation: 'SKILLED FRONT-END WEB DEVELOPER' */
