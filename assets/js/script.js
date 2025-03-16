@@ -1,55 +1,6 @@
-// JavaScript
+// JS
 
 document.addEventListener("DOMContentLoaded", function() {
-
-// Underline
-
-  const links = document.querySelectorAll('a');
-
-  links.forEach(link => {
-    link.addEventListener('mouseover', function() {
-      link.style.textDecoration = 'underline';
-    });
-
-    link.addEventListener('mouseout', function() {
-      link.style.textDecoration = 'none';
-    });
-  });
-
-  const socialMediaText = document.querySelector('footer .socialmedia p');
-  if (socialMediaText) {
-    socialMediaText.addEventListener('mouseover', function() {
-      socialMediaText.style.textDecoration = 'underline';
-    });
-
-    socialMediaText.addEventListener('mouseout', function() {
-      socialMediaText.style.textDecoration = 'none';
-    });
-  }
-
-// Scroll
-
-  const scrollToSection = (id) => {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-// Href
-
-  const linksArray = [
-    { selector: 'a[href="#projects"]', target: '#projects' },
-    { selector: 'a[href="#contact"]', target: '#contact' },
-    { selector: 'a[href="#aboutme"]', target: '#aboutme' }
-  ];
-
-  linksArray.forEach(link => {
-    const anchor = document.querySelector(link.selector);
-    if (anchor) {
-      anchor.addEventListener('click', () => scrollToSection(link.target));
-    }
-  });
 
 // Particles
 
@@ -197,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-// Aboutme
+// About-me
 
 function animateImageVertical() {
   const img = document.getElementById('cobalt');
@@ -220,10 +171,10 @@ function animateImage() {
 }
 
 document.getElementById('Charizard').addEventListener('click', function() {
-  document.querySelector('.aboutmetext .text').classList.add('moved');
+  document.querySelector('.about-me-text .text').classList.add('moved');
 
   setTimeout(function() {
-    document.querySelector('.aboutmetext .text').classList.remove('moved');
+    document.querySelector('.about-me-text .text').classList.remove('moved');
   }, 1000);
 });
 
@@ -259,7 +210,7 @@ function shuffleTextEffect(element, duration = 1000) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.getElementById("shuffleText");
+  const textElement = document.getElementById("shuffle-text");
   textElement.addEventListener("mouseenter", () => shuffleTextEffect(textElement));
 });
 
@@ -269,7 +220,7 @@ function adjustTextBasedOnWidth() {
   const contactText = document.getElementById('contact-text');
   
   if (window.innerWidth < 1024) {
-    contactText.innerHTML = 'Reach out for work or anything else <br><span class="email-link">darryldjong@gmail.com <img src="assets/img/pikachu.webp" alt="Pikachu" class="pikachu-image"></span>';
+    contactText.innerHTML = 'Reach out for work or anything else <br><span class="email-link">darryldjong@gmail.com</span>';
   }
 }
 
