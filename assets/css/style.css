@@ -299,8 +299,8 @@ html {
 }
 
 .download-button {
-  background-color: #3165b2;
-  color:#000000;
+  background-color: #004ecc;
+  color:#2abfed;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -309,10 +309,11 @@ html {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   font-family: 'Sour Gummy', sans-serif;
+  text-shadow: 3px 3px 5px #000000;
 }
 
 .download-button:hover {
-  background-color: #3a5196;
+  background-color: #2144ad;
   transform: scale(1.05);
 }
 
@@ -424,7 +425,6 @@ button {
 }
 
 button:hover {
-  color: #007bff;
   transform: scale(1.2);
 }
 
@@ -497,7 +497,12 @@ form {
   position: relative;
   top: 10px;
   font-size: 18px;
-  left: -20px;
+}
+
+#certifications:hover .certification-content {
+  transform: translateY(-10px) scale(1.05) rotate(5deg);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 input, textarea {
@@ -511,20 +516,20 @@ input, textarea {
 }
 
 .custom-send-button {
-  background-color: #3165b2;
-  color: rgb(0, 0, 0);
-  font-family: 'Sour Gummy', sans-serif;
-  padding: 12px;
+  background-color: #385da2;
+  color:#2abfed;
+  padding: 12px 24px;
+  border: none;
   border-radius: 8px;
-  font-size: 16px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  width: 80%;
+  font-family: 'Sour Gummy', sans-serif;
+  text-shadow: 3px 3px 5px #000000;
 }
 
 .custom-send-button:hover {
-  background-color: #3a5196;
+  background-color: #3663bd;
   font-family: 'Sour Gummy', sans-serif;
   transform: scale(1.05);
 }
@@ -837,9 +842,33 @@ form {
   #totodile {
     margin-top: -200px;
   }
+
+  .background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(to bottom, #0059e9, #003b99);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    z-index: -1;
 }
 
-/* Media Queries for Responsive Layout ( 500 px ) */
+.background-shape-footer {
+  width: 100%;
+  height: 150px;
+  background-color: #154ec0;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+}
+
+/* Media Queries for Responsive Layout (500 px) */
 
 @media screen and (min-width: 500px) {
   input, textarea {
@@ -858,5 +887,24 @@ form {
     font-size: 12px;
     width: 165px;
     margin-left: 40px;
+  }
+}
+
+/* Media Queries for Responsive Layout (mobile devices) */
+
+@media screen and (max-width: 500px) {
+  input, textarea {
+    width: 50%;
+  }
+
+  #contact-text {
+    position: relative;
+    margin-top: -50px;
+    font-size: 15px;
+  }
+
+  .custom-send-button {
+    font-size: 12px;
+    width: 165px;
   }
 }
