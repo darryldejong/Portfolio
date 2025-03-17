@@ -500,9 +500,9 @@ form {
 }
 
 #certifications:hover .certification-content {
-  transform: translate(5px, -5px) scale(1.02) rotate(2deg);
+  transform: translateY(-10px) scale(1.05) rotate(5deg);
   opacity: 1;
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 input, textarea {
