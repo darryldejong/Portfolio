@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // About-me
 
 function animateImageVertical() {
-  const img = document.getElementById('cobalt');
+  const img = document.getElementById('pidgeot');
   
   img.classList.add('animate');
   
@@ -161,7 +161,7 @@ function animateImageVertical() {
 }
 
 function animateImage() {
-  const img = document.getElementById('totodile');
+  const img = document.getElementById('croconaw');
   
   img.classList.add('animate');
   
@@ -170,51 +170,13 @@ function animateImage() {
   }, 500);
 }
 
-document.getElementById('Charizard').addEventListener('click', function() {
+document.getElementById('sprigatito').addEventListener('click', function() {
   document.querySelector('.about-me-text .text').classList.add('moved');
 
   setTimeout(function() {
     document.querySelector('.about-me-text .text').classList.remove('moved');
   }, 1000);
 });
-
-let isAnimating = false;
-
-function shuffleTextEffect(element, duration = 1000) {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    const originalText = element.innerText;
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    let iteration = 0;
-
-    const interval = setInterval(() => {
-        element.innerText = originalText
-            .split("")
-            .map((char, index) => {
-                if (char === " ") return " ";
-                return index < iteration ? originalText[index] : letters[Math.floor(Math.random() * letters.length)];
-            })
-            .join("");
-
-        if (iteration >= originalText.length) {
-            clearInterval(interval);
-            
-            setTimeout(() => {
-                element.innerText = originalText;
-                isAnimating = false;
-            }, 500);
-        }
-        iteration += 1;
-    }, 50);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.getElementById("shuffle-text");
-  textElement.addEventListener("mouseenter", () => shuffleTextEffect(textElement));
-});
-
-// Contact
  
 function adjustTextBasedOnWidth() {
 }
