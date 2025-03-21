@@ -50,7 +50,7 @@ nav a {
   font-size: 20px;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 3px 3px 5px #2f78de;
+  text-shadow: 3px 3px 5px #17389d;
 }
 
 .name-nav {
@@ -147,18 +147,77 @@ header, main, footer {
 .about-me-text h1 {
   color: #40a3ea;
   text-shadow: 3px 3px 5px #000000;
+  animation: colorChange 5s infinite;
+  font-size: 40px;
+  margin-left: -100px;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #40a3ea;
+  }
+  25% {
+    color: #e7f340;
+  }
+  50% {
+    color: #32cd32;
+  }
+  75% {
+    color: #ff1493;
+  }
+  100% {
+    color: #ff6347;
+  }
 }
 
 .about-me-text h2 {
   color:#2abfed;
   text-shadow: 3px 3px 5px #000000;
-  font-size: 1.17em;
+  font-size: 25px;
+  white-space: nowrap;
 }
 
-.text-container {
-  color: #111111;
+.about-me-text h3 {
+  color: #FF5733;
+  text-shadow: 3px 3px 5px #000000;
+  text-decoration: underline;
+}
+
+.personal-text {
+  color: #000000;
   font-weight: bold;
   font-size: 21px;
+  text-shadow: 3px 3px 5px #1533ab;
+}
+
+.highlight-1 {
+  color: #FF5733;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-2 {
+  color: #33FF57;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-3 {
+  color: #3357FF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-4 {
+  color: #FF33A8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-5 {
+  color: #FF8C33;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-6 {
+  color: #33FFF3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .background-shape {
@@ -203,7 +262,7 @@ footer .copyright p {
   transform: scale(0.8);
 }
 
-.pikachu-image {
+.pikachu {
   vertical-align: bottom;
 }
 
@@ -451,7 +510,7 @@ button:hover {
   z-index: -1;
 }
 
-#Charizard {
+#sprigatito {
   cursor: pointer;
   margin-left: 20px;
   position: relative;
@@ -471,18 +530,25 @@ button:hover {
 .email-link {
   color: #2b509f;
   text-decoration: underline;
+  position: relative;
+  top: -20px;
 }
 
-.container {
+.form-container {
   display: flex;
   background: white;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: auto;
-  max-width: 300px;
+  width: 300px;
   margin: 0 auto;
-  height: 325px;
+  height: 300px;
+}
+
+form {
+  width: 300px;
+  position: relative;
+  top: -20px;
 }
 
 .right-section {
@@ -496,10 +562,6 @@ button:hover {
 .right-section h3 {
   font-size: 20px;
   margin-bottom: 10px;
-}
-
-form {
-  width: 300px;
 }
 
 #contact-text {
@@ -565,23 +627,24 @@ input, textarea {
   text-align: center;
 }
 
-#totodile {
+#croconaw {
   transition: transform 0.5s ease;
   cursor: pointer;
+  width: 500px;
 }
 
-#totodile.animate {
+#croconaw.animate {
   transform: translateX(100px);
 }
 
-#cobalt {
+#pidgeot {
   transition: transform 0.5s ease;
   cursor: pointer;
   margin-right: 20px;
   width: 125px;
 }
 
-#cobalt.animate {
+#pidgeot.animate {
   transform: translateY(-50px);
 }
 
@@ -680,6 +743,12 @@ form {
   background-color: #c0392b;
 }
 
+.eevee {
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+}
+
 .arrow {
   width: 40px;
   margin-top: 10px;
@@ -759,7 +828,7 @@ img {
     transform: translateY(75px);
   }
 
-  #cobalt {
+  #pidgeot {
     display: none;
   }
 
@@ -810,7 +879,7 @@ img {
     font-size: 2rem;
   }
 
-  .container {
+  .form-container {
     display: flex;
     background: white;
     border-radius: 12px;
@@ -859,7 +928,7 @@ img {
     margin-top: 20px !important;
   }
 
-  #totodile {
+  #croconaw {
     margin-top: -200px;
   }
 
