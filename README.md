@@ -12,8 +12,7 @@
 A special thanks to these platforms for providing these resources.
 
 #### Credits
-- [FREE Bouncy Totodile Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Totodile-Icon-760358219) by **kattling**
-- [FREE Bouncy Nidorina Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Nidorina-Icon-784358759)
+- [FREE Bouncy Nidorina Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Nidorina-Icon-784358759) by **kattling**
 - [FREE Bouncy Croconaw Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Croconaw-Icon-742374606)
 - [FREE Bouncy Pikachu Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Pikachu-Icon-335023977)
 - [{F2U} - Flareon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Flareon-Pixel-Icon-670091180) by **LeoKatana**
