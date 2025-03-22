@@ -795,18 +795,13 @@ img {
     overflow-x: hidden;
   }
 
-  .about-me {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .certifications-container {
     flex-direction: column;
     gap: 15px;
   }
 
   .project {
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
   }
 
@@ -826,10 +821,6 @@ img {
     top: -70px;
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     transform: translateY(75px);
-  }
-
-  #pidgeot {
-    display: none;
   }
 
   .icon-contact-extra {
@@ -977,7 +968,7 @@ img {
 
 /* Media Queries for Responsive Layout (mobile devices) */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   input, textarea {
     width: 50%;
   }
@@ -992,4 +983,61 @@ img {
     font-size: 12px;
     width: 165px;
   }
+
+  .about-me {
+    top: -125px;
+  }
+
+  .about-me-text h1 {
+    font-size: 20px;
+    margin-left: -60px;
+  }
+
+  .about-me-text h2 {
+    font-size: 16px;
+    margin-left: -30px;
+  }
+
+  .about-me-text h3 {
+    font-size: 20px;
+    margin-left: -15px;
+  }
+
+  .personal-text {
+    font-size: 18px;
+    margin-left: -15px;
+  }
+
+  #pidgeot {
+    width: 50px;
+  }
+
+  #croconaw {
+    width: 120px;
+    margin-left: -85px;
+    margin-top: 220px;
+  }
+
+  .email-link {
+    position: relative;
+    top: 10px;
+  }
+
+  #contact-text {
+    margin-left: -20px;
+}
+
+  .pikachu {
+    position: relative;
+    margin-left: 180px;
+    top: -50px;
+  }
+
+  .form {
+    margin-top: -10px;
+}
+
+.download-button {
+  margin-left: 30px;
+}
 }
