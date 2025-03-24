@@ -222,10 +222,3 @@ window.onload = function() {
     };
   }
 };
-
-var userLanguage = navigator.language || navigator.userLanguage;
-
-if (userLanguage && userLanguage.startsWith("nl") && !window.location.pathname.startsWith("/en/")) {
-} else if (userLanguage && !userLanguage.startsWith("nl") && !window.location.pathname.startsWith("/en/")) {
-    window.location.href = "/en/";
-}
