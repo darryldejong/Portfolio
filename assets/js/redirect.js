@@ -1,12 +1,9 @@
 var userLanguage = navigator.language || navigator.userLanguage;
 
-if (!localStorage.getItem("languageRedirected")) {
-    if (userLanguage.startsWith("nl") && !window.location.pathname.startsWith("/nl")) {
+if (window.location.pathname === "/") {
+    if (userLanguage.startsWith("nl")) {
         window.location.href = "/nl";
-        localStorage.setItem("languageRedirected", "true");
-    } 
-    else if (!userLanguage.startsWith("nl") && !window.location.pathname.startsWith("/en")) {
+    } else {
         window.location.href = "/en";
-        localStorage.setItem("languageRedirected", "true");
     }
 }
