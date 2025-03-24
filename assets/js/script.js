@@ -222,3 +222,11 @@ window.onload = function() {
     };
   }
 };
+
+// Language
+var userLanguage = navigator.language || navigator.userLanguage;
+
+if (userLanguage && userLanguage.startsWith("nl")) {
+} else {
+    window.location.href = "/en/index.html";
+}
