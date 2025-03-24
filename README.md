@@ -22,6 +22,7 @@ A special thanks to these platforms for providing these resources.
 - [Sprigatito Jumping Animation](https://www.deviantart.com/nintendo95/art/Sprigatito-Jumping-Animation-938849622) by **Nintendo95**
 - [Eevee Dance Animation](https://www.deviantart.com/nintendo95/art/Eevee-Dance-Animation-805679611)
 - [Mega Pidgeot back Animated v2](https://www.deviantart.com/diegotoon20/art/Mega-Pidgeot-back-Animated-v2-Request-547672975) by **Diegotoon20**
+- [Growlithe Sprite Gif](https://www.deviantart.com/sadslug/art/Growlithe-Sprite-Gif-267708461) by **sadslug**
 
 Thank you to the artists for providing these sprites and for their generous permission to use them. 🐮
 
