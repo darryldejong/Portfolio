@@ -183,14 +183,13 @@ function adjustTextBasedOnWidth() {
 
 // Cookies
 
-window.addEventListener('load', adjustTextBasedOnWidth);
+window.addEventListener('load', function() {
+  adjustTextBasedOnWidth();
 
-window.addEventListener('resize', adjustTextBasedOnWidth);
-
-window.onload = function() {
   if (localStorage.getItem('cookies-accepted') === 'true') {
     document.getElementById('cookie-banner').style.display = 'none';
     loadGoogleAnalytics();
+    logUserData();
   } else if (localStorage.getItem('cookies-accepted') === 'false') {
     document.getElementById('cookie-banner').style.display = 'none';
   } else {
@@ -201,6 +200,7 @@ window.onload = function() {
     document.getElementById('cookie-banner').style.display = 'none';
     localStorage.setItem('cookies-accepted', 'true');
     loadGoogleAnalytics();
+    logUserData();
   };
 
   document.getElementById('reject-cookies').onclick = function() {
@@ -221,14 +221,21 @@ window.onload = function() {
       gtag('config', 'G-4GY3CSW481');
     };
   }
-};
 
-function logUserData() {
-  fetch('/.netlify/functions/logUserData')
-    .then(response => response.json())
-    .then(data => {})
-    .catch(error => {});
-}
+  function logUserData() {
+    const userData = {};
+    sendUserDataToFirebase(userData);
+  }
 
-window.onload = logUserData;
+  function sendUserDataToFirebase(data) {
+    fetch('/.netlify/functions/loguserdata', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    }).catch(error => {});
+  }
 
+  function adjustTextBasedOnWidth() {}
+});
+
+window.addEventListener('resize', adjustTextBasedOnWidth);
