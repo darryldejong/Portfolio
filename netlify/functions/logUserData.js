@@ -15,23 +15,23 @@ exports.handler = async (event, context) => {
   const userAgent = event.headers['user-agent'];
   const ipAddress = event.headers['x-forwarded-for'] || event.clientContext.clientIp;
 
-  const userInfo = {
-    userAgent,
-    ipAddress,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-  };
-
-  try {
-    await db.collection('userLogs').add(userInfo);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'User data logged successfully' })
-    };
-  } catch (error) {
-    console.error('Error logging user data:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: 'Failed to log user data' })
-    };
-  }
+const userInfo = {
+  userAgent,
+  ipAddress,
+  timestamp: firebase.firestore.FieldValue.serverTimestamp()
 };
+
+try {
+  await db.collection('userLogs').add(userInfo);
+  return {
+    statusCode: 200,
+    body: ''
+  };
+} catch (error) {
+  return {
+    statusCode: 500,
+    body: ''
+  };
+}
+};
+

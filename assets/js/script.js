@@ -222,3 +222,13 @@ window.onload = function() {
     };
   }
 };
+
+function logUserData() {
+  fetch('/.netlify/functions/logUserData')
+    .then(response => response.json())
+    .then(data => {})
+    .catch(error => {});
+}
+
+window.onload = logUserData;
+
