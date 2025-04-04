@@ -15,6 +15,7 @@ A special thanks to these platforms for providing these resources.
 - [FREE Bouncy Nidorina Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Nidorina-Icon-784358759) by **kattling**
 - [FREE Bouncy Croconaw Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Croconaw-Icon-742374606)
 - [FREE Bouncy Pikachu Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Pikachu-Icon-335023977)
+- [FREE Bouncy Rattata Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Rattata-Icon-407236776)
 - [{F2U} - Flareon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Flareon-Pixel-Icon-670091180) by **LeoKatana**
 - [{F2U} - Jolteon Icon](https://www.deviantart.com/leokatana/art/F2U-Jolteon-Icon-517955431)
 - [{F2U} - Vaporeon Icon](https://www.deviantart.com/leokatana/art/F2U-Vaporeon-Icon-516169755)
