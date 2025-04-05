@@ -1310,6 +1310,10 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   left: 0;
   z-index: -1;
 }
+  
+  .popup {
+  display: none !important;
+}
 }
 
 /* Media Queries for Responsive Layout (500 px) */
