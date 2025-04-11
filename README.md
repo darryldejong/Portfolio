@@ -24,6 +24,7 @@ A special thanks to these platforms for providing these resources.
 - [Eevee Dance Animation](https://www.deviantart.com/nintendo95/art/Eevee-Dance-Animation-805679611)
 - [Mega Pidgeot back Animated v2](https://www.deviantart.com/diegotoon20/art/Mega-Pidgeot-back-Animated-v2-Request-547672975) by **Diegotoon20**
 - [Growlithe Sprite Gif](https://www.deviantart.com/sadslug/art/Growlithe-Sprite-Gif-267708461) by **sadslug**
+- [051 - Palij - Phenardant](https://www.deviantart.com/anarlaurendil/art/051-Palij-Phenardant-761103365) by **Anarlaurendil**
 
 Thank you to the artists for providing these sprites and for their generous permission to use them. 🐮
 
