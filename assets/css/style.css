@@ -1461,6 +1461,9 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
 
 .download-button {
   margin-left: 30px;
+  font-size: 16px;
+  width: 120px;
+  height: 30px;
 }
 }
 
@@ -1541,9 +1544,6 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   }
 
   .download-button {
-    width: 100px;
-    height: 25px;
-    font-size: 10px;
     padding: 5px 10px;
     position: relative;
     left: 125px;
