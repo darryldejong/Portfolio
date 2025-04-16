@@ -393,23 +393,25 @@ html {
 }
 
 .download-button {
-  background-color: #115CC5;
-  color: #1f1e1e;
+  background-color: #132f97a3;
+  color: #000000;
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
   font-family: 'Sour Gummy', sans-serif;
-  text-shadow: #ffffff;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease-out;
+  border: 3px solid #111111;
+  text-shadow: #ffffff;
+  transform: skew(10deg, -5deg);
 }
 
 .download-button:hover {
-  background-color: rgb(5, 90, 188);
-  transform: scale(1.05);
+  text-shadow: 0 0 10px #1b358b;
+  transform: skew(10deg, -5deg);
 }
 
 .progress-bar {
@@ -418,7 +420,7 @@ html {
   left: 0;
   height: 5px;
   width: 0%;
-  background-color: rgba(0, 200, 255, 0.8);
+  background-color: rgba(0, 127, 206, 0.8);
   transition: width 0.1s linear;
   z-index: 1;
 }
@@ -426,6 +428,22 @@ html {
 .button-text {
   position: relative;
   z-index: 2;
+  display: inline-block;
+  animation: none;
+  transition: transform 0.3s ease;
+}
+
+.download-button:hover .button-text {
+  animation: wave-bounce 0.8s ease-out forwards;
+}
+
+@keyframes wave-bounce {
+  0%   { transform: translateY(0) skewY(0deg); }
+  20%  { transform: translateY(-6px) skewY(-5deg); }
+  40%  { transform: translateY(3px) skewY(3deg); }
+  60%  { transform: translateY(-2px) skewY(-2deg); }
+  80%  { transform: translateY(1px) skewY(1deg); }
+  100% { transform: translateY(0) skewY(0deg); }
 }
 
 #projects h2 {
@@ -642,15 +660,35 @@ input, textarea {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
   font-family: 'Sour Gummy', sans-serif;
   text-shadow: #ffffff;
   margin-top: -10px;
+  border: 3px solid #092346;
+  overflow: hidden;
 }
 
 .custom-send-button:hover {
-  background-color: rgb(47, 91, 173);
-  transform: scale(1.05);
+  transform: none;
+}
+
+.custom-send-button:hover .button-text {
+  display: inline-block;
+  animation: bounce-and-dance 1s ease 3;
+}
+
+@keyframes bounce-and-dance {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-6px) rotate(-2deg); 
+  }
+  50% { 
+    transform: translateY(0) rotate(0deg);
+  }
+  75% { 
+    transform: translateY(-3px) rotate(2deg);
+  }
 }
 
 .flex-center {
@@ -1395,7 +1433,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   #contact-text {
     position: relative;
     margin-top: -50px;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 40px;
   }
 
