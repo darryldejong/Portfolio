@@ -451,7 +451,7 @@ scrollBtn.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const downloadButton = document.getElementById('downloadButton');
   const progressBar = document.getElementById('progressBar');
   let progress = 0;
@@ -459,47 +459,48 @@ document.addEventListener('DOMContentLoaded', function() {
   let isDownloading = false;
 
   function resetProgress() {
-      progress = 0;
-      progressBar.style.width = '0%';
+    progress = 0;
+    progressBar.style.width = '0%';
   }
 
   function updateProgress(timestamp) {
-      if (!isDownloading) return;
+    if (!isDownloading) return;
 
-      const progressIncrement = Math.min(100, (timestamp - lastTime) / 20);
-      progress += progressIncrement;
-      progressBar.style.width = progress + '%';
+    const progressIncrement = Math.min(100, (timestamp - lastTime) / 20);
+    progress += progressIncrement;
+    progressBar.style.width = progress + '%';
 
-      if (progress < 100) {
-          lastTime = timestamp;
-          requestAnimationFrame(updateProgress);
-      } else {
-          window.open('../assets/docs/Resume.pdf', '_blank');
-          setTimeout(() => {
-              resetProgress();
-              isDownloading = false;
-          }, 300);
-      }
+    if (progress < 100) {
+      lastTime = timestamp;
+      requestAnimationFrame(updateProgress);
+    } else {
+      window.open('../assets/docs/Resume.pdf', '_blank');
+      setTimeout(() => {
+        resetProgress();
+        isDownloading = false;
+      }, 300);
+    }
   }
 
-  downloadButton.addEventListener('mousedown', function() {
+  function startDownload() {
+    resetProgress();
+    isDownloading = true;
+    lastTime = performance.now();
+    requestAnimationFrame(updateProgress);
+  }
+
+  function cancelDownload() {
+    if (progress < 100) {
       resetProgress();
-      isDownloading = true;
-      lastTime = performance.now();
-      requestAnimationFrame(updateProgress);
-  });
+      isDownloading = false;
+    }
+  }
 
-  downloadButton.addEventListener('mouseup', function() {
-      if (progress < 100) {
-          resetProgress();
-          isDownloading = false;
-      }
-  });
+  downloadButton.addEventListener('mousedown', startDownload);
+  downloadButton.addEventListener('mouseup', cancelDownload);
+  downloadButton.addEventListener('mouseleave', cancelDownload);
 
-  downloadButton.addEventListener('mouseleave', function() {
-      if (progress < 100) {
-          resetProgress();
-          isDownloading = false;
-      }
-  });
+  downloadButton.addEventListener('touchstart', startDownload, { passive: false });
+  downloadButton.addEventListener('touchend', cancelDownload);
+  downloadButton.addEventListener('touchcancel', cancelDownload);
 });
