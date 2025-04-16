@@ -454,41 +454,52 @@ scrollBtn.onclick = function () {
 document.addEventListener('DOMContentLoaded', function() {
   const downloadButton = document.getElementById('downloadButton');
   const progressBar = document.getElementById('progressBar');
-  let progressInterval;
   let progress = 0;
-  
+  let lastTime = 0;
+  let isDownloading = false;
+
   function resetProgress() {
-      clearInterval(progressInterval);
       progress = 0;
       progressBar.style.width = '0%';
   }
-  
+
+  function updateProgress(timestamp) {
+      if (!isDownloading) return;
+
+      const progressIncrement = Math.min(100, (timestamp - lastTime) / 20);
+      progress += progressIncrement;
+      progressBar.style.width = progress + '%';
+
+      if (progress < 100) {
+          lastTime = timestamp;
+          requestAnimationFrame(updateProgress);
+      } else {
+          window.open('../assets/docs/Resume.pdf', '_blank');
+          setTimeout(() => {
+              resetProgress();
+              isDownloading = false;
+          }, 300);
+      }
+  }
+
   downloadButton.addEventListener('mousedown', function() {
       resetProgress();
-      
-      progressInterval = setInterval(function() {
-          progress += 1;
-          progressBar.style.width = progress + '%';
-          
-          if (progress >= 100) {
-              clearInterval(progressInterval);
-              window.open('../assets/docs/Resume.pdf', '_blank');
-              setTimeout(() => {
-                  resetProgress();
-              }, 300);
-          }
-      }, 20);
+      isDownloading = true;
+      lastTime = performance.now();
+      requestAnimationFrame(updateProgress);
   });
-  
+
   downloadButton.addEventListener('mouseup', function() {
       if (progress < 100) {
           resetProgress();
+          isDownloading = false;
       }
   });
-  
+
   downloadButton.addEventListener('mouseleave', function() {
       if (progress < 100) {
           resetProgress();
+          isDownloading = false;
       }
   });
 });
