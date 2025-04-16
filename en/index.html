@@ -83,7 +83,10 @@
         </p>
       </div>      
       </p>
-        <button class="download-button" onclick="window.open('../assets/docs/Resume.pdf', '_blank')">OPEN RESUME</button>
+      <button class="download-button" id="downloadButton">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="button-text">OPEN RESUME</span>
+    </button>
     </div>
     <div class="image-right" onclick="animateImage()" onkeydown="animateImage()" tabindex="0">
       <img src="../assets/img/croconaw.gif" alt="Croconaw GIF" id="croconaw">
