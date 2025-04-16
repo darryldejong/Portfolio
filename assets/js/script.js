@@ -450,3 +450,45 @@ window.onscroll = function () {
 scrollBtn.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const downloadButton = document.getElementById('downloadButton');
+  const progressBar = document.getElementById('progressBar');
+  let progressInterval;
+  let progress = 0;
+  
+  function resetProgress() {
+      clearInterval(progressInterval);
+      progress = 0;
+      progressBar.style.width = '0%';
+  }
+  
+  downloadButton.addEventListener('mousedown', function() {
+      resetProgress();
+      
+      progressInterval = setInterval(function() {
+          progress += 1;
+          progressBar.style.width = progress + '%';
+          
+          if (progress >= 100) {
+              clearInterval(progressInterval);
+              window.open('../assets/docs/Resume.pdf', '_blank');
+              setTimeout(() => {
+                  resetProgress();
+              }, 300);
+          }
+      }, 20);
+  });
+  
+  downloadButton.addEventListener('mouseup', function() {
+      if (progress < 100) {
+          resetProgress();
+      }
+  });
+  
+  downloadButton.addEventListener('mouseleave', function() {
+      if (progress < 100) {
+          resetProgress();
+      }
+  });
+});
