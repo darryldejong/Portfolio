@@ -211,7 +211,8 @@ header, main, footer {
   color: #111111;
   font-weight: bold;
   font-size: 22px;
-  text-shadow: 3px 3px 5px #1533ab;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(21, 51, 171, 0.5);
 }
 
 .highlight-1 {
@@ -392,21 +393,39 @@ html {
 }
 
 .download-button {
-  background-color: rgb(21, 84, 166);
-  color:#e0e1e4;
+  background-color: #115CC5;
+  color: #1f1e1e;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   font-family: 'Sour Gummy', sans-serif;
-  text-shadow: 3px 3px 5px #000000;
+  text-shadow: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
 .download-button:hover {
-  background-color: rgb(20, 73, 144);
+  background-color: rgb(5, 90, 188);
   transform: scale(1.05);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-color: rgba(0, 200, 255, 0.8);
+  transition: width 0.1s linear;
+  z-index: 1;
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
 }
 
 #projects h2 {
@@ -616,20 +635,21 @@ input, textarea {
 }
 
 .custom-send-button {
-  background-color: #3b5d9b;
-  color:#ffffff;
-  font-size: 14px;
+  background-color: #3767c1;
+  color: #1f1e1e;
+  font-size: 15px;
   padding: 12px 24px;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   font-family: 'Sour Gummy', sans-serif;
-  text-shadow: 3px 3px 5px #000000;
+  text-shadow: #ffffff;
+  margin-top: -10px;
 }
 
 .custom-send-button:hover {
-  background-color: #36548b;
+  background-color: rgb(47, 91, 173);
   transform: scale(1.05);
 }
 
@@ -1074,7 +1094,7 @@ body.dark-mode textarea {
 }
 
 body.dark-mode span.email-link {
-  color: #77A7DA;
+  color: #537ca9;
 }
 
 body.dark-mode #contact-text {
@@ -1090,7 +1110,7 @@ body.dark-mode div.project-info p {
 }
 
 body.dark-mode .copyright p {
-  color: #c1bcb4;
+  color: #000000;
 }
 
 body.dark-mode .cookie {
@@ -1151,6 +1171,13 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   transition: none !important;
 }
 
+#scrollTopBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
 .scrolltext {
   display: none;
   position: absolute;
@@ -1172,6 +1199,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   display: block;
   opacity: 1;
 }
+
 
 /* Text animation: 'HI, MY NAME IS DARRYL' */
 
@@ -1285,7 +1313,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   }
 
   .custom-send-button {
-    font-size: 12px;
+    font-size: 14px;
     width: 165px;
     margin-left: 5px;
   }
@@ -1391,7 +1419,6 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   }
 
   .custom-send-button {
-    font-size: 12px;
     width: 165px;
   }
 
@@ -1461,7 +1488,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
 
 .download-button {
   margin-left: 30px;
-  font-size: 16px;
+  font-size: 15px;
   width: 120px;
   height: 30px;
 }
