@@ -212,7 +212,7 @@ header, main, footer {
   font-weight: bold;
   font-size: 22px;
   line-height: 1.4;
-  text-shadow: 1px 1px 2px rgba(21, 51, 171, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 51, 255, 0.5);
 }
 
 .highlight-1 {
@@ -226,7 +226,7 @@ header, main, footer {
 }
 
 .highlight-3 {
-  color: #3357FF;
+  color: #2F52F0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -406,7 +406,6 @@ html {
   transition: transform 0.2s ease-out;
   border: 3px solid #111111;
   text-shadow: #ffffff;
-  transform: skew(10deg, -5deg);
 }
 
 .download-button:hover {
@@ -652,9 +651,9 @@ input, textarea {
   font-family: 'Sour Gummy', sans-serif;
 }
 
-.custom-send-button {
+.send-button {
   background-color: #3767c1;
-  color: #1f1e1e;
+  color: #000000;
   font-size: 15px;
   padding: 12px 24px;
   border-radius: 8px;
@@ -665,14 +664,16 @@ input, textarea {
   margin-top: -10px;
   border: 3px solid #092346;
   overflow: hidden;
-}
-
-.custom-send-button {
   transition: transform 0.3s ease;
 }
 
-.custom-send-button:hover {
-  transform: skewX(-10deg);
+.send-button:hover {
+  text-shadow: 0 0 10px #1c62b3d3;
+  transform: skew(10deg, -3deg);
+}
+
+.send-button:hover .button-text {
+  animation: wave-bounce 0.8s ease-out forwards;
 }
 
 .flex-center {
@@ -1029,19 +1030,19 @@ body.dark-mode .copyright p {
 }
 
 body.dark-mode #certifications h2 {
-  color: #c1bcb4;
+  color: #cac9c8;
 }
 
 body.dark-mode #skills h2 {
-  color: #c1bcb4;
+  color: #cac9c8;
 }
 
 body.dark-mode #projects h2 {
-  color: #c1bcb4;
+  color: #cac9c8;
 }
 
 body.dark-mode #contact-me h2 {
-  color: #c1bcb4;
+  color: #cac9c8;
 }
 
 body.dark-mode .skills-container .skill p {
@@ -1049,12 +1050,12 @@ body.dark-mode .skills-container .skill p {
 }
 
 body.dark-mode ul.ul li a {
-  color: #DDDAD6;
+  color: #d5d2cf;
   text-shadow: none;
 }
 
 body.dark-mode .personal-text p {
-  color: #DDDAD6;
+  color: #d5d2cf;
 }
 
 body.dark-mode .personal-text {
@@ -1222,6 +1223,29 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   opacity: 1;
 }
 
+.dark-mode-effect {
+  position: fixed;
+  top: 0;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.1;
+  animation: subtleSlideIn 0.6s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes subtleSlideIn {
+  0% {
+    left: 20%;
+    opacity: 0.1;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
 
 /* Text animation: 'HI, MY NAME IS DARRYL' */
 
@@ -1334,7 +1358,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
     max-width: 75%;
   }
 
-  .custom-send-button {
+  .send-button {
     font-size: 14px;
     width: 165px;
     margin-left: 5px;
@@ -1421,7 +1445,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
     margin-left: 40px;
   }
 
-  .custom-send-button {
+  .send-button {
     width: 165px;
     margin-left: 40px;
   }
@@ -1440,7 +1464,7 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
     font-size: 15px;
   }
 
-  .custom-send-button {
+  .send-button {
     width: 165px;
   }
 
