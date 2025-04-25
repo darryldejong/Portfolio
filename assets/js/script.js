@@ -185,6 +185,10 @@ function adjustTextBasedOnWidth() {
 
 window.addEventListener('load', function () {
   adjustTextBasedOnWidth();
+  
+  function isNetherlandsVersion() {
+    return window.location.pathname.includes('/nl/');
+  }
 
   setTimeout(() => {
     const cookieBanner = document.getElementById('cookie-banner');
@@ -289,25 +293,33 @@ window.addEventListener('load', function () {
     popup.id = 'cookie-management-popup';
     popup.className = 'cookie-popup';
 
+    const isNL = isNetherlandsVersion();
+
     const header = document.createElement('h2');
-    header.textContent = 'Manage Cookie Preferences';
+    header.textContent = isNL ? 'Cookievoorkeuren beheren' : 'Manage Cookie Preferences';
     header.className = 'cookie-popup-header';
 
     const description = document.createElement('p');
-    description.textContent = 'Select which cookies you want to accept. Your preferences will be saved.';
+    description.textContent = isNL 
+      ? 'Selecteer welke cookies je wilt accepteren. Je voorkeuren worden opgeslagen.' 
+      : 'Select which cookies you want to accept. Your preferences will be saved.';
     description.className = 'cookie-popup-description';
 
     const analyticsSection = createToggleSection(
       'analytics-toggle',
       'Google Analytics',
-      'Helps us understand how visitors interact with our website.',
+      isNL 
+        ? 'Helpt ons te begrijpen hoe bezoekers onze website gebruiken.' 
+        : 'Helps us understand how visitors interact with our website.',
       localStorage.getItem('analytics-enabled') !== 'false'
     );
 
     const cloudStorageSection = createToggleSection(
       'cloud-storage-toggle',
-      'User Data Storage',
-      'Used to store user preferences, track user activities, and provide a personalized experience.',
+      isNL ? 'Gebruikersgegevensopslag' : 'User Data Storage',
+      isNL 
+        ? 'Gebruikt om gebruikersvoorkeuren op te slaan, gebruikersactiviteiten bij te houden en een gepersonaliseerde ervaring te bieden.' 
+        : 'Used to store user preferences, track user activities, and provide a personalized experience.',
       localStorage.getItem('cloud-storage-enabled') !== 'false'
     );
 
@@ -315,11 +327,11 @@ window.addEventListener('load', function () {
     buttonsContainer.className = 'cookie-buttons-container';
 
     const saveButton = document.createElement('button');
-    saveButton.textContent = 'SAVE PREFERENCES';
+    saveButton.textContent = isNL ? 'VOORKEUREN OPSLAAN' : 'SAVE PREFERENCES';
     saveButton.className = 'cookie-save-btn';
 
     const closeButton = document.createElement('button');
-    closeButton.textContent = 'DISMISS CHANGES';
+    closeButton.textContent = isNL ? 'WIJZIGINGEN ANNULEREN' : 'DISMISS CHANGES';
     closeButton.className = 'cookie-close-btn';
 
     saveButton.onclick = function () {
@@ -426,16 +438,27 @@ window.addEventListener('resize', adjustTextBasedOnWidth);
 
 document.getElementById("darkModeToggle").addEventListener("click", function(event) {
   const themeGif = document.getElementById("themeGif");
+
   if (event.target.tagName === 'IMG') {
     event.preventDefault();
+
     document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-      themeGif.src = "../assets/img/rattata.gif";
-    } else {
-      themeGif.src = "../assets/img/nidorina.gif";
-    }
+
+    themeGif.src = document.body.classList.contains("dark-mode")
+      ? "../assets/img/rattata.gif"
+      : "../assets/img/nidorina.gif";
+
+    const effect = document.createElement("div");
+    effect.className = "dark-mode-effect";
+    document.body.appendChild(effect);
+
+    setTimeout(() => {
+      effect.remove();
+    }, 500);
   }
 });
+
+// Scroll to top
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
@@ -450,6 +473,8 @@ window.onscroll = function () {
 scrollBtn.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+// Progress bar
 
 document.addEventListener('DOMContentLoaded', function () {
   const downloadButton = document.getElementById('downloadButton');
