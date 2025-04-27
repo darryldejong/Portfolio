@@ -3,21 +3,7 @@
 @font-face {
   font-family: 'Sour Gummy';
   src: url('../fonts/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sour Gummy';
-  src: url('../fonts/SourGummy-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sour Gummy';
-  src: url('../fonts/SourGummy-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-weight: 100 900;
   font-style: normal;
 }
 
@@ -1537,6 +1523,10 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   font-size: 15px;
   width: 120px;
   height: 30px;
+}
+
+.button-text {
+  font-size: 12px;
 }
 }
 
