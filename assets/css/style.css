@@ -1222,6 +1222,93 @@ body.dark-mode .cookie-checkbox:checked + .cookie-slider {
   z-index: 9999;
 }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.loading-text {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.loading-quaqsire {
+  width: 50px;
+  height: auto;
+}
+
+.line-wobble {
+  --uib-size: 200px;
+  --uib-speed: 1.55s;
+  --uib-color: #ff3366;
+  --uib-line-weight: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--uib-line-weight);
+  width: var(--uib-size);
+  border-radius: calc(var(--uib-line-weight) / 2);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.line-wobble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0.2;
+  filter: blur(2px);
+}
+
+.line-wobble::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  border-radius: calc(var(--uib-line-weight) / 2);
+  animation: wobble var(--uib-speed) ease-in-out infinite, loaderColorChange var(--uib-speed) ease-in-out infinite;
+  transform: translateX(-90%);
+  background-color: var(--uib-color);
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: translateX(-90%);
+  }
+  50% {
+    transform: translateX(90%);
+  }
+}
+
+@keyframes loaderColorChange {
+  0% {
+    background-color: #ff3366;
+  }
+  33% {
+    background-color: #6a5acd;
+  }
+  66% {
+    background-color: #32cd32;
+  }
+  100% {
+    background-color: #ff3366;
+  }
+}
+
 @keyframes subtleSlideIn {
   0% {
     left: 20%;
