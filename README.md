@@ -1,7 +1,7 @@
 ## Portfolio Darryl de Jong 🦤
 ### This website is built using HTML, CSS, and JavaScript, with a responsive design for both desktop and mobile devices to showcase my skills as an IT student.
 
-![Image](assets/img/image.webp)
+![Image](https://raw.githubusercontent.com/darryldejong/readme-assets/refs/heads/main/image.webp)
 
 #### For the website, I used:
 - FontAwesome (fontawesome.com)
@@ -16,6 +16,7 @@ A special thanks to these platforms for providing these resources.
 - [FREE Bouncy Croconaw Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Croconaw-Icon-742374606)
 - [FREE Bouncy Pikachu Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Pikachu-Icon-335023977)
 - [FREE Bouncy Rattata Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Rattata-Icon-407236776)
+- [FREE Bouncy Quagsire Icon](https://www.deviantart.com/kattling/art/FREE-Bouncy-Quagsire-Icon-784357598)
 - [{F2U} - Flareon Pixel Icon](https://www.deviantart.com/leokatana/art/F2U-Flareon-Pixel-Icon-670091180) by **LeoKatana**
 - [{F2U} - Jolteon Icon](https://www.deviantart.com/leokatana/art/F2U-Jolteon-Icon-517955431)
 - [{F2U} - Vaporeon Icon](https://www.deviantart.com/leokatana/art/F2U-Vaporeon-Icon-516169755)
