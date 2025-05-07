@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darryl de Jong | Portfolio</title>
-    <link rel="icon" href="/assets/img/favicon.png" type="image/png">
-    <script type="text/javascript" src="assets/js/redirect.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darryl de Jong | Portfolio</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <div id="loader">
+    <div class="line-wobble"></div>
+    <p class="loading-text">LOADING STUFF...</p>
+    <img class="loading-quaqsire" src="assets/img/quagsire.gif" alt="Quaqsire IMG">
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const userLanguage = navigator.language || navigator.userLanguage;
+      setTimeout(function () {
+        if (location.pathname === "/") {
+          if (userLanguage.startsWith("nl")) {
+            location.replace("/nl");
+          } else {
+            location.replace("/en");
+          }
+        }
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
