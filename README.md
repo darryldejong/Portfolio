@@ -1,7 +1,7 @@
 ## Portfolio Darryl de Jong 🦤
 ### This website is built using HTML, CSS, and JavaScript, with a responsive design for both desktop and mobile devices to showcase my skills as an IT student.
 
-![Image](https://raw.githubusercontent.com/darryldejong/readme-assets/refs/heads/main/image.webp)
+![Image](https://github.com/darryldejong/readme-assets/blob/8ba1222ba6a63812bdc1df7759b2626a8ebdabca/Portfolio/image.webp)
 
 #### For the website, I used:
 - FontAwesome (fontawesome.com)
