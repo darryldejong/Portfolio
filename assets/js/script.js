@@ -1,5 +1,17 @@
 // JS
 
+(function() {
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "enabled") {
+    document.body.classList.add("dark-mode");
+
+    const themeGif = document.getElementById("themeGif");
+    if (themeGif) {
+      themeGif.src = "../assets/img/rattata.gif";
+    }
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", function() {
 
 // Particles
@@ -32,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-// Certificates
+// Certifications
 
   const certificationLinks = {
     "Hackerrank Python (Basic) - okt. 2024": "https://www.hackerrank.com/certificates/iframe/ff7695dca3f7",
@@ -148,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-// About-me
+// About me
 
 function animateImageVertical() {
   const img = document.getElementById('pidgeot');
@@ -177,15 +189,10 @@ document.getElementById('sprigatito').addEventListener('click', function() {
     document.querySelector('.about-me-text .text').classList.remove('moved');
   }, 1000);
 });
- 
-function adjustTextBasedOnWidth() {
-}
 
-// Cookies
+// Analytics
 
 window.addEventListener('load', function () {
-  adjustTextBasedOnWidth();
-  
   function isNetherlandsVersion() {
     return window.location.pathname.includes('/nl/');
   }
@@ -213,6 +220,7 @@ window.addEventListener('load', function () {
       localStorage.setItem('cookies-accepted', 'true');
       localStorage.setItem('analytics-enabled', 'true');
       localStorage.setItem('cloud-storage-enabled', 'true');
+      localStorage.setItem('necessary-cookies-enabled', 'true');
       
       loadGoogleAnalytics();
       logUserData();
@@ -223,6 +231,7 @@ window.addEventListener('load', function () {
 
   document.getElementById('reject-cookies').onclick = function () {
     localStorage.setItem('cookies-accepted', 'false');
+    localStorage.setItem('necessary-cookies-enabled', 'true');
     document.getElementById('cookie-banner').style.display = 'none';
   };
 
@@ -245,7 +254,6 @@ window.addEventListener('load', function () {
   function disableGoogleAnalytics() {
     window['ga-disable-G-4GY3CSW481'] = true;
     document.querySelectorAll('script[src*="googletagmanager.com"]').forEach(script => script.remove());
-    window.dataLayer = [];
   }
 
   function loadGoogleAnalytics() {
@@ -305,6 +313,25 @@ window.addEventListener('load', function () {
       : 'Select which cookies you want to accept. Your preferences will be saved.';
     description.className = 'cookie-popup-description';
 
+    const necessaryCookiesSection = createToggleSection(
+      'necessary-cookies-toggle',
+      isNL ? 'Noodzakelijk' : 'Necessary',
+      isNL 
+        ? 'Deze cookies zijn essentieel voor het functioneren en beveiligen van de website. Ze verzamelen geen persoonlijke gegevens en worden alleen gebruikt voor basisfunctionaliteit.' 
+        : 'These cookies are essential for the website to function properly and securely. They don\'t collect any personal data and are only used for basic functionality.',
+      true,
+      true
+    );
+
+    const cloudStorageSection = createToggleSection(
+      'cloud-storage-toggle',
+      isNL ? 'Statistieken' : 'Statistics',
+      isNL 
+        ? 'Slaat gebruikersvoorkeuren op, houdt gebruikersactiviteiten bij en zorgt voor een gepersonaliseerde ervaring.' 
+        : 'Stores user preferences, tracks user activities, and provides a personalized experience.',
+      localStorage.getItem('cloud-storage-enabled') !== 'false'
+    );
+
     const analyticsSection = createToggleSection(
       'analytics-toggle',
       'Google Analytics',
@@ -312,15 +339,6 @@ window.addEventListener('load', function () {
         ? 'Helpt ons te begrijpen hoe bezoekers onze website gebruiken.' 
         : 'Helps us understand how visitors interact with our website.',
       localStorage.getItem('analytics-enabled') !== 'false'
-    );
-
-    const cloudStorageSection = createToggleSection(
-      'cloud-storage-toggle',
-      isNL ? 'Gebruikersgegevensopslag' : 'User Data Storage',
-      isNL 
-        ? 'Gebruikt om gebruikersvoorkeuren op te slaan, gebruikersactiviteiten bij te houden en een gepersonaliseerde ervaring te bieden.' 
-        : 'Used to store user preferences, track user activities, and provide a personalized experience.',
-      localStorage.getItem('cloud-storage-enabled') !== 'false'
     );
 
     const buttonsContainer = document.createElement('div');
@@ -352,8 +370,9 @@ window.addEventListener('load', function () {
 
     popup.appendChild(header);
     popup.appendChild(description);
-    popup.appendChild(analyticsSection);
+    popup.appendChild(necessaryCookiesSection);
     popup.appendChild(cloudStorageSection);
+    popup.appendChild(analyticsSection);
     popup.appendChild(buttonsContainer);
 
     popupOverlay.appendChild(popup);
@@ -361,7 +380,7 @@ window.addEventListener('load', function () {
     popupOverlay.style.display = 'flex';
   }
 
-  function createToggleSection(id, title, description, isChecked) {
+  function createToggleSection(id, title, description, isChecked, isDisabled = false) {
     const container = document.createElement('div');
     container.className = 'cookie-toggle-section';
 
@@ -380,6 +399,11 @@ window.addEventListener('load', function () {
     checkbox.id = id;
     checkbox.className = 'cookie-checkbox';
     checkbox.checked = isChecked;
+    checkbox.disabled = isDisabled;
+
+    if (isDisabled) {
+      toggle.classList.add('disabled');
+    }
 
     const slider = document.createElement('span');
     slider.className = 'cookie-slider';
@@ -403,14 +427,17 @@ window.addEventListener('load', function () {
   function saveCookiePreferences() {
     const analyticsEnabled = document.getElementById('analytics-toggle').checked;
     const cloudStorageEnabled = document.getElementById('cloud-storage-toggle').checked;
-
+    
+    localStorage.setItem('necessary-cookies-enabled', 'true');
     localStorage.setItem('analytics-enabled', analyticsEnabled);
     localStorage.setItem('cloud-storage-enabled', cloudStorageEnabled);
     localStorage.setItem('cookies-accepted', 'custom');
 
     document.getElementById('cookie-banner').style.display = 'none';
 
-    const dataToSend = {};
+    const dataToSend = {
+      necessaryCookies: true
+    };
 
     if (analyticsEnabled) {
       dataToSend.analytics = true;
@@ -432,9 +459,7 @@ window.addEventListener('load', function () {
   }
 });
 
-window.addEventListener('resize', adjustTextBasedOnWidth);
-
-// Switch theme
+// Dark mode
 
 document.getElementById("darkModeToggle").addEventListener("click", function(event) {
   const themeGif = document.getElementById("themeGif");
@@ -444,9 +469,13 @@ document.getElementById("darkModeToggle").addEventListener("click", function(eve
 
     document.body.classList.toggle("dark-mode");
 
-    themeGif.src = document.body.classList.contains("dark-mode")
-      ? "../assets/img/rattata.gif"
-      : "../assets/img/nidorina.gif";
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      themeGif.src = "../assets/img/rattata.gif";
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      themeGif.src = "../assets/img/nidorina.gif";
+    }
 
     const effect = document.createElement("div");
     effect.className = "dark-mode-effect";
@@ -458,7 +487,7 @@ document.getElementById("darkModeToggle").addEventListener("click", function(eve
   }
 });
 
-// Scroll to top
+// Scroll button
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
@@ -486,7 +515,18 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetProgress() {
     progress = 0;
     progressBar.style.width = '0%';
+    progressBar.style.backgroundColor = '#e63946';
   }
+
+  function getProgressColor(progress) {
+  if (progress < 33) {
+    return '#e63946';
+  } else if (progress < 67) {
+    return '#ffc300';
+  } else {
+    return '#38b000';
+  }
+}
 
   function updateProgress(timestamp) {
     if (!isDownloading) return;
@@ -494,6 +534,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressIncrement = Math.min(100, (timestamp - lastTime) / 20);
     progress += progressIncrement;
     progressBar.style.width = progress + '%';
+    progressBar.style.backgroundColor = getProgressColor(progress);
 
     if (progress < 100) {
       lastTime = timestamp;
@@ -528,4 +569,20 @@ document.addEventListener('DOMContentLoaded', function () {
   downloadButton.addEventListener('touchstart', startDownload, { passive: false });
   downloadButton.addEventListener('touchend', cancelDownload);
   downloadButton.addEventListener('touchcancel', cancelDownload);
+});
+
+// Language switcher
+
+document.addEventListener('click', function(event) {
+  if (event.target && event.target.classList.contains('pikachu')) {
+    const currentPath = window.location.pathname;
+    
+    if (currentPath.startsWith('/nl')) {
+      window.location.href = '/en';
+    } else if (currentPath.startsWith('/en')) {
+      window.location.href = '/nl';
+    } else {
+      window.location.href = '/en';
+    }
+  }
 });
